@@ -2,3 +2,4 @@
 
 # webstorm project config
 .idea/*
+.idea/inspectionProfiles/*
