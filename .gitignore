@@ -1,0 +1,4 @@
+# gitignore
+
+# webstorm project config
+.idea/*
