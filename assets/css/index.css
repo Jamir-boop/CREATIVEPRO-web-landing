@@ -14,6 +14,7 @@
 body{
     background-color: var(--void);
     color: var(--w);
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar{
@@ -41,7 +42,7 @@ body::-webkit-scrollbar-thumb{
     min-width: 100%;
     min-height: 100%;
     z-index: -1;
-    opacity: 0.3;
+    opacity: 0.1;
 }
 
 
@@ -71,12 +72,15 @@ header .nav-container{
     border: 2px solid transparent;
     color: var(--w);
     font-size: 1rem;
+    letter-spacing: 2px;
     padding: 0.5rem 1rem 0.5rem 1rem;
     transition: var(--transition);
 }
 
 .nav-container .nav-btn a:hover{
     border-bottom: 2px solid var(--blue);
+    font-weight: bold;
+    letter-spacing: 0;
 }
 
 .nav-inscripcion .inscribir{
@@ -133,10 +137,99 @@ header .nav-container{
     display: grid;
     place-items: center;
     margin: 60px;
+    width: 100%;
+}
+
+
+/* ==== CARDS ==== */
+.section-cards{
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 0;
+    place-items: center;
+    margin-inline: 0;
+}
+
+.section-cards .wrapper{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.section-cards .wrapper:focus{
+    outline: 0;
+}
+
+.card {
+    background: white;
+    width: 300px;
+    display: inline-block;
+    margin: auto;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    box-shadow: -1px 15px 30px -12px black;
+    z-index: 9999;
+    color: var(--void);
+}
+
+.card-image {
+  position: relative;
+  height: 230px;
+  margin-bottom: 35px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: var(--void);
+}
+
+.card-image img {
+    width: 370px;
+    position: absolute;
+    top: -140px;
+    left: -20px;
+}
+
+.sobre-titulo {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: var(--fucshia);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-desc {
+    padding: 20px;
+    margin-bottom: 10px;
+
+}
+
+.card-footer {
+  background: var(--fucshia);
+}
+
+.card-footer {
+  color: white;
+  font-weight: 700;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
 }
 
 /* ==== FOOTER ==== */
-
 footer{
     position: absolute;
     width: 100%;
