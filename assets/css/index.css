@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,400;1,700&display=swap');
-
 :root{
     --void: #0e0b16;
+    --void_transparent: rgba(14, 11, 22, 0.38);
     --void_blue: #101a3e;
     --w: #fffb;
     --w2: #e7dfdd;
@@ -67,6 +66,7 @@ header .nav-container{
 
 .nav-btn a,
 .nav-inscripcion a{
+    cursor: pointer;
     text-decoration: none;
     text-transform: capitalize;
     border: 2px solid transparent;
@@ -77,13 +77,15 @@ header .nav-container{
     transition: var(--transition);
 }
 
-.nav-container .nav-btn a:hover{
+.nav-container .nav-btn a:hover,
+.nav-container .nav-btn a:focus{
     border-bottom: 2px solid var(--blue);
     font-weight: bold;
-    letter-spacing: 0;
+    letter-spacing: 1px;
 }
 
 .nav-inscripcion .inscribir{
+    cursor: pointer;
     text-decoration: none;
     color: var(--w);
     background-color: var(--blue);
@@ -96,7 +98,8 @@ header .nav-container{
     transition: var(--transition);
 }
 
-.nav-inscripcion .inscribir:hover{
+.nav-inscripcion .inscribir:hover,
+.nav-inscripcion .inscribir:focus{
     color: var(--w2);
     border: 2px solid var(--blue);
     background-color: var(--void_blue);
@@ -116,7 +119,7 @@ header .nav-container{
 
 /* ==== CONTENIDO ==== */
 .section{
-    margin: 20px 20% 0 20%;
+    margin: 20px 10% 0 10%;
 }
 
 .maintitle,
@@ -137,7 +140,6 @@ header .nav-container{
     display: grid;
     place-items: center;
     margin: 60px;
-    width: 100%;
 }
 
 
@@ -229,6 +231,143 @@ header .nav-container{
 	height: 0;
 }
 
+/* ==== SHOWCASE MAIN BUTTON ==== */
+.section-showcase{
+    color: var(--w2);
+    padding: 2rem;
+    background: var(--void_transparent);
+}
+
+.showcase-title h1{
+    font-size: 2.5rem;
+    text-decoration: underline;
+}
+
+.showcase-list{
+    padding: 1rem;
+}
+
+.showcase-listimg{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    grid-gap: 2rem;
+    place-items: center;
+}
+
+.showcase-listimg li{
+    font-size: 1.25rem;
+}
+
+.showcase-img{
+    width: 380px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.showcase-img img{
+    width: 600px;
+    align-items: center;
+    background-color: var(--void);
+
+}
+
+.showcase-img > img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.sell-limitado{
+    margin: 5rem 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+.sell-inscribirse{
+    display: grid;
+    place-items: center;
+    margin: 5rem 2rem;
+}
+
+.sell-inscribirse a{
+    font-size: 3rem;
+
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--w);
+    border: 0.125em solid var(--blue);
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+
+    text-shadow: 0 0 0.125em #00ffffe6, 0 0 0.25em var(--blue);
+    box-shadow: inset 0 0 0.5em 0 var(--blue), 0 0 0.5em 0 var(--blue);
+
+    position: relative;
+    cursor: pointer;
+}
+
+.sell-inscribirse a::before{
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    background-color: var(--blue);
+
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(2em) rotateX(40deg);
+    filter: blur(0.7em);
+    opacity: 0.6;
+}
+
+.sell-inscribirse a::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--blue);
+    background-color: var(--blue);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+
+
+.sell-inscribirse a:hover,
+.sell-inscribirse a:focus{
+    background: var(--blue);
+    color: var(--void);
+    text-shadow: none;
+}
+
+.sell-inscribirse a:hover::before,
+.sell-inscribirse a:focus::before{
+    opacity: 1;
+}
+
+.sell-inscribirse a:hover::after,
+.sell-inscribirse a:focus::after{
+    opacity: 1;
+}
+
+/* ==== CARTA ==== */
+
+
+
 /* ==== FOOTER ==== */
 footer{
     position: absolute;
@@ -258,7 +397,8 @@ footer{
     border: 2px solid var(--void);
 }
 
-.botones a:hover{
+.botones a:hover,
+.botones a:focus{
     border: 2px solid var(--fucshia);
 }
 
