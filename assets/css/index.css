@@ -2,7 +2,7 @@
     --void: #0e0b16;
     --void_transparent: rgba(14, 11, 22, 0.38);
     --void_blue: #101a3e;
-    --w: #fffb;
+    --w: #ffff;
     --w2: #e7dfdd;
     --fucshia: #FC427B;
     --blue: #4717f6;
@@ -117,13 +117,22 @@ header .nav-container{
     text-decoration: none;
 }
 
-/* ==== CONTENIDO ==== */
+/* ==== VIDEO TITLE ==== */
 .section{
-    margin: 20px 10% 0 10%;
+    width: 100%;
 }
 
-.maintitle,
-.sectitle{
+.section-title{
+    background: linear-gradient(0deg, rgba(14,11,22,1) 0%, rgba(8,6,12,0) 60%);
+    margin: 2rem 0;
+}
+
+.container-title{
+
+}
+
+.main-title,
+.sec-title{
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
@@ -131,15 +140,14 @@ header .nav-container{
     text-shadow: -4px 4px 10px rgba(0,0,0,0.6);
 }
 
-.maintitle .span-red,
-.sectitle span{
+.main-title .span-red,
+.sec-title span{
     color: var(--fucshia);
 }
 
 .video-title{
     display: grid;
     place-items: center;
-    margin: 60px;
 }
 
 
@@ -152,6 +160,8 @@ header .nav-container{
     margin: 0;
     place-items: center;
     margin-inline: 0;
+
+    background: var(--void);
 }
 
 .section-cards .wrapper{
@@ -234,33 +244,34 @@ header .nav-container{
 /* ==== SHOWCASE MAIN BUTTON ==== */
 .section-showcase{
     color: var(--w2);
-    padding: 2rem;
-    background: var(--void_transparent);
 }
 
-.showcase-title h1{
+.showcase-container{
+}
+
+.showcase-title{
     font-size: 2.5rem;
     text-decoration: underline;
 }
 
+.showcase-container-listnimg{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(-90deg, rgba(234,143,116,1) 0%, rgba(0,0,0,0) 100%);
+}
+
 .showcase-list{
-    padding: 1rem;
+    padding: 0 3em;
 }
 
-.showcase-listimg{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-    grid-gap: 2rem;
-    place-items: center;
-}
-
-.showcase-listimg li{
+.showcase-list ul{
     font-size: 1.25rem;
 }
 
 .showcase-img{
-    width: 380px;
     height: 450px;
+    width: 380px;
+
     overflow: hidden;
     position: relative;
     display: inline-block;
@@ -271,7 +282,6 @@ header .nav-container{
 .showcase-img img{
     width: 600px;
     align-items: center;
-    background-color: var(--void);
 
 }
 
@@ -292,13 +302,13 @@ header .nav-container{
 }
 
 
-.sell-inscribirse{
+.sell-btn-inscribirse{
     display: grid;
     place-items: center;
     margin: 5rem 2rem;
 }
 
-.sell-inscribirse a{
+.sell-btn-inscribirse a{
     font-size: 3rem;
 
     display: inline-block;
@@ -317,7 +327,7 @@ header .nav-container{
     cursor: pointer;
 }
 
-.sell-inscribirse a::before{
+.sell-btn-inscribirse a::before{
     pointer-events: none;
     content: '';
     position: absolute;
@@ -332,7 +342,7 @@ header .nav-container{
     opacity: 0.6;
 }
 
-.sell-inscribirse a::after{
+.sell-btn-inscribirse a::after{
     content: '';
     position: absolute;
     top: 0;
@@ -347,25 +357,184 @@ header .nav-container{
 }
 
 
-.sell-inscribirse a:hover,
-.sell-inscribirse a:focus{
+.sell-btn-inscribirse a:hover,
+.sell-btn-inscribirse a:focus{
     background: var(--blue);
     color: var(--void);
     text-shadow: none;
 }
 
-.sell-inscribirse a:hover::before,
-.sell-inscribirse a:focus::before{
+.sell-btn-inscribirse a:hover::before,
+.sell-btn-inscribirse a:focus::before{
     opacity: 1;
 }
 
-.sell-inscribirse a:hover::after,
-.sell-inscribirse a:focus::after{
+.sell-btn-inscribirse a:hover::after,
+.sell-btn-inscribirse a:focus::after{
     opacity: 1;
 }
 
 /* ==== CARTA ==== */
+.section-carta{
+    width: 100%;
+    margin: 0 auto;
+}
 
+.carta-container{
+    /*display: grid;*/
+    /*grid-template-columns: repeat(auto-fit, minmax(500px, 0.1fr));*/
+    display: flex;
+    justify-content: center;
+
+    overflow: hidden;
+    grid-gap: 1em;
+}
+
+.imagen-carta img{
+    max-width: 500px;
+}
+
+.text-carta{
+    font-size: 1.3rem;
+    display: grid;
+    place-content: center;
+}
+
+/* ==== NOTICIAS ==== */
+.section-noticias{
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+.title-noticias h2{
+    font-size: 1.5rem;
+}
+
+.title-noticias h1{
+    font-size: 2rem;
+}
+
+.noticias{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    place-content: center;
+    overflow: hidden;
+}
+
+.noticia-bloque h3{
+    max-width: 300px;
+    margin: 20px auto 20px;
+    text-align: left;
+}
+
+.noticias .noticia-bloque img{
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+/* ==== PRODUCTO ==== */
+.section-producto{
+
+}
+
+.producto-main{
+    background: var(--w);
+    color: var(--void);
+    padding: 2em 0;
+}
+
+.producto-title{
+    font-size: 1.5rem;
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.producto-title h1{
+    color: var(--fucshia);
+}
+
+.modulos-producto{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 0.5fr));
+    grid-gap: 3em;
+    margin: 0 auto;
+    max-width: 60%;
+}
+
+.modulos-producto ul{
+    font-size: 1.2rem;
+}
+
+.modulos-producto ul li{
+    font-size: 0.8em;
+ }
+
+.modulos-producto ul h2 span{
+    color: var(--fucshia);
+}
+
+
+
+.bonus-title{
+    text-align: center;
+}
+
+.bonus-title h1{
+    text-decoration: 0.25em underline var(--fucshia);
+}
+
+.producto-bonus{
+    margin: 40px auto;
+    color: var(--w);
+}
+
+.unit-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+.bonus-unit{
+    display: flex;
+    flex-direction: row;
+    max-width: 40%;
+    margin: 1.2em 0;
+}
+
+.bonus-unit img{
+    width: 150px;
+}
+
+.producto-pricing{
+    font-size: 1.5rem;
+    background:- var(--fucshia);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.producto-pricing > *{
+    margin: 0;
+    padding: .3em 0;
+}
+
+.oferta-especial{
+    background: var(--w);
+    color: var(--void);
+    margin: 0;
+    padding: .3em 0;
+    text-align: center;
+}
+.oferta-lista{
+    text-align: left;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.oferta-lista ul h1{
+
+}
 
 
 /* ==== FOOTER ==== */
@@ -373,20 +542,22 @@ footer{
     position: absolute;
     width: 100%;
     background: var(--void);
-    margin: 10% 0 10px 0;
+    margin-top: 4rem;
 }
 
 .footer-container{
-    display: grid;
-    padding:20px 40px 20px 40px;
-    font-size:15px;
+    font-size: 1rem;
+
+    margin: 0 auto;
+    padding:1em 2em;
     line-height:24px;
     color:var(--w2);
+    max-width: 55em;
     text-align: center;
 }
 
 .fila p{
-    padding-inline: 20rem;
+    text-align: justify;
 }
 
 .botones a{
