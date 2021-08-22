@@ -38,7 +38,7 @@ body::-webkit-scrollbar-thumb{
 header .nav-container{
     display: grid;
     grid-template-columns: 20% 60% 20%;
-    /*height: 85px;*/
+    padding: 1.1em 0;
 }
 
 .nav-container .nav-logo,
@@ -96,7 +96,7 @@ header .nav-container{
 
 /* ############ */
 .header:hover{
-    background: var(--void);
+    background: var(--void_blue);
     transition: all 500ms ease;
 }
 
@@ -137,6 +137,9 @@ header .nav-container{
     text-transform: uppercase;
     font-weight: bold;
     font-size: 2em;
+    max-width: 40em;
+    margin: 0 auto;
+
     text-shadow: -4px 4px 10px rgba(0,0,0,0.6);
 }
 
@@ -161,7 +164,7 @@ header .nav-container{
     place-items: center;
     margin-inline: 0;
 
-    background: var(--void);
+    background: var(--void_blue);
 }
 
 .section-cards .wrapper{
@@ -547,15 +550,16 @@ header .nav-container{
 }
 
 .oferta-especial{
-    background: #8E2DE2;
-    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
-    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
 
 
     color: var(--w);
     margin: 0;
     padding: .3em 0;
     text-align: center;
+
+    animation: animatedgradient 15s ease alternate infinite;
+    background-size: 300% 300%;
 }
 
 .oferta-lista{
@@ -599,7 +603,7 @@ header .nav-container{
 
     text-decoration: none;
     color: var(--w);
-    background: var(--fucshia);
+    background: var(--blue);
 
     padding: 0.4em 0.5em;
     -webkit-border-radius: 0.3em;
@@ -609,16 +613,97 @@ header .nav-container{
 
 .main-btn:hover{
     border-radius: 5px;
-    box-shadow: 0 0 5px    var(--fucshia),
-              0 0 25px var(--fucshia),
-              0 0 50px var(--fucshia),
-              0 0 100px var(--fucshia);
+    box-shadow: 0 0 5px    var(--blue),
+    0 0 25px var(--blue),
+    0 0 50px var(--blue),
+    0 0 100px var(--blue);
 
     transition: all 200ms ease-in-out;
 }
 
 .main-btn:hover ~ .oferta-especial{
     background: none;
+}
+
+/* ==== GRID ==== */
+.section-grid h1, .estudiantes_title{
+    text-align: center;
+    font-size: 3rem;
+    padding: 2em 0;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 2em;
+    place-items: center;
+}
+
+.grid-container div{
+    font-size: 3.5rem;
+    display: inline-block;
+    background-color: var(--void);
+
+    min-width: 280px;
+    min-height: 280px;
+    max-width: 280px;
+    max-height: 280px;
+
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    border-radius: 0.125em;
+}
+
+.grid_text{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style:italic;
+    text-align: right;
+    vertical-align: middle;
+
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    animation: animatedgradient 5s ease alternate infinite;
+
+    background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0 50%;
+	}
+}
+
+
+.grid-container div > img{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.grid-container div img{
+    width: 300px;
+}
+
+/* ==== ESTUDIANTES ==== */
+.estudiante img{
+    max-width: 200px;
+    max-height: 200px;
 }
 
 
