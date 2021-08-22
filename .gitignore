@@ -3,3 +3,9 @@
 # webstorm project config
 .idea/*
 .idea/inspectionProfiles/*
+.github/*
+.github/workflows/*
+.firebase/*
+.firebaserc
+.firebase.json
+.public/*
