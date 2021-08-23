@@ -5,15 +5,15 @@ body{
 }
 
 body::-webkit-scrollbar{
-    width: 0.25rem;
+    width: 0.6rem;
 }
 
 body::-webkit-scrollbar-track{
-    background: var(--fucshia);
+    background: transparent;
 }
 
 body::-webkit-scrollbar-thumb{
-  background: var(--fucshia);
+    background: var(--blue);
 }
 
 /* ==== BG VIDEO ==== */
@@ -480,6 +480,10 @@ header .nav-container{
     text-transform: uppercase;
 }
 
+.producto-title img{
+    max-width: 500px;
+}
+
 .producto-title h1{
     color: var(--fucshia);
 }
@@ -488,12 +492,12 @@ header .nav-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 0.5fr));
     grid-gap: 3em;
-    margin: 0 auto;
-    max-width: 60%;
+    place-content: center;
 }
 
 .modulos-producto ul{
     font-size: 1.2rem;
+    margin: 0 auto;
 }
 
 .modulos-producto ul li{
@@ -503,7 +507,6 @@ header .nav-container{
 .modulos-producto ul h2 span{
     color: var(--fucshia);
 }
-
 
 
 .bonus-title{
@@ -528,8 +531,9 @@ header .nav-container{
 .bonus-unit{
     display: flex;
     flex-direction: row;
-    max-width: 40%;
+    max-width: 600px;
     margin: 1.2em 0;
+    box-shadow: var(--shadow);
 }
 
 .bonus-unit img{
@@ -558,7 +562,7 @@ header .nav-container{
     padding: .3em 0;
     text-align: center;
 
-    animation: animatedgradient 15s ease alternate infinite;
+    animation: animatedgradient 10s ease alternate infinite;
     background-size: 300% 300%;
 }
 
@@ -626,7 +630,7 @@ header .nav-container{
 }
 
 /* ==== GRID ==== */
-.section-grid h1, .estudiantes_title{
+.section-grid h1{
     text-align: center;
     font-size: 3rem;
     padding: 2em 0;
@@ -649,6 +653,7 @@ header .nav-container{
     max-width: 280px;
     max-height: 280px;
 
+    box-shadow: var(--shadow);
     overflow: hidden;
     position: relative;
     margin: 0;
@@ -700,10 +705,208 @@ header .nav-container{
     width: 300px;
 }
 
+
 /* ==== ESTUDIANTES ==== */
-.estudiante img{
-    max-width: 200px;
-    max-height: 200px;
+.section-estudiantes {
+    font-size: 1.5rem;
+    color: var(--w);
+
+    max-width: 800px;
+    margin: 2.5em auto;
+    padding: 0 .2em;
+}
+
+.estudiantes_title{
+    text-align: center;
+    color: orange;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.estudiante_row{
+    margin: 0 0 2em;
+}
+
+.estudiante_row p{
+    position: relative;
+    padding: 20px 20px 20px 65px;
+    background: var(--void_blue);
+    border-radius: 10px;
+    margin-bottom: 35px;
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+/* Speach bouble Quote */
+.estudiante_row p:before{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+
+  font-size: 60px;
+  font-weight: bold;
+
+  /*Positioning*/
+  position: absolute;
+  left: 20px;
+  top: 5px;
+}
+
+/* Speech bouble triangle */
+.estudiante_row p:after{
+  content: ' ';
+  border: 10px solid;
+  border-color: var(--void_blue) transparent transparent var(--void_blue);
+  position: absolute;
+  bottom: -20px;
+  left: 30px;
+}
+
+.wrappper{
+  margin-bottom: 50px;
+}
+
+.wrappper img{
+  width: 150px;
+  height: 150px;
+  float: left;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.wrappper h3{
+  padding: 15px 0 0 0;
+  color: orange;
+}
+
+.wrappper small{
+  display: block;
+  color: #999;
+  margin-top: -10px;
+}
+
+.wrappper ul{
+  list-style: none;
+}
+
+.wrappper ul li{
+  display: inline;
+  font-size: 1.3em;
+}
+
+.puntuacion_1 li:nth-child(-n+5),
+.puntuacion_2 li:nth-child(-n+4){
+  color: orange;
+}
+
+/* ==== GARANTIA ==== */
+.section-garantia{
+    margin: 0 0 2em 0;
+}
+
+.garantia-container{
+    font-size: 1.2rem;
+
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 0.4em;
+    padding: .2em .2em;
+
+    color: var(--w);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+
+    display: flex;
+    align-items: center;
+}
+
+.garantia-container img{
+    width: 150px;
+    height: 150px;
+}
+
+/* ==== PRODUCTO2 ==== */
+.oferta-lista2 ul li{
+    list-style: '✔ ';
+}
+
+.oferta-lista2 h1{
+    font-size: 1.2rem !important;
+}
+
+.precio-green{
+    background: #13b113 !important;
+    text-decoration: none !important;
+}
+
+/* ==== Q&A ==== */
+.section_QA{
+    margin: 5em 0;
+}
+
+.section_QA h1{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: .7em 0.2em;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.QA_container{
+    font-size: 1.2rem;
+    display: grid;
+    place-items: center;
+    grid-gap: 2.5em;
+    padding: 0 1em;
+}
+
+.pregunta{
+    max-width: 600px;
+    border: 3px solid transparent;
+    border-image: linear-gradient(45deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-image-slice: 1;
+    padding: 0.3em;
+
+    -webkit-border-radius: 0.2em;
+    -moz-border-radius: 0.2em;
+    border-radius: 0.2em;
+
+    position: relative;
+}
+
+.pregunta::before,
+.pregunta::after{
+    --scale: 0;
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(var(--scale));
+    transition: 120ms transform;
+    transform-origin: center;
+}
+
+.pregunta::before{
+    content: attr(data-tooltip);
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    height: 110%;
+    max-height: 110%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+
+    border-radius: 0.3rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 0;
+}
+
+.pregunta:hover::before{
+    --scale: 1;
 }
 
 
@@ -712,7 +915,7 @@ footer{
     position: absolute;
     width: 100%;
     background: var(--void);
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .footer-container{
@@ -720,10 +923,13 @@ footer{
 
     margin: 1.2rem auto;
     padding:1em 2em;
-    line-height:24px;
     color:var(--w2);
     max-width: 55em;
     text-align: center;
+}
+
+.fila h3{
+    cursor: pointer;
 }
 
 .fila p{
@@ -736,11 +942,12 @@ footer{
     padding: 0.5rem;
     border-radius: 10px;
     border: 2px solid var(--void);
+    box-shadow: var(--shadow);
 }
 
 .botones a:hover,
 .botones a:focus{
-    border: 2px solid var(--fucshia);
+    border: 1.5px solid var(--blue);
 }
 
 .custom-shape-divider-bottom-1629585552 {
@@ -761,6 +968,6 @@ footer{
 }
 
 .custom-shape-divider-bottom-1629585552 .shape-fill {
-    fill: #302B3C;
+    fill: rgba(255, 255, 255, 0.24);
 }
 

@@ -7,6 +7,7 @@
     --fucshia: #ec5704;
     --blue: #0092CB;
     --transition: all 200ms ease-in-out;
+    --shadow: 0px 10px 13px -7px #000000, 4px 8px 18px 11px rgba(0,0,0,0.1);
     font-family: 'Georama', sans-serif;
 }
 

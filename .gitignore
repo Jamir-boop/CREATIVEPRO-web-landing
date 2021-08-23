@@ -10,3 +10,5 @@
 .firebase.json
 .public/*
 .vscode/*
+.assets/css/test.css
+.test.html
