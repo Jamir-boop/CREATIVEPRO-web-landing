@@ -32,79 +32,6 @@ body::-webkit-scrollbar-thumb{
     opacity: 0.1;
 }
 
-
-
-/* ==== BARRA ==== */
-header .nav-container{
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-    padding: 1.1em 0;
-}
-
-.nav-container .nav-logo,
-.nav-container .nav-inscripcion{
-    display: grid;
-    place-items: center;
-}
-
-.nav-container .nav-btn{
-    display: flex;
-    align-items: center;
-}
-
-.nav-btn a,
-.nav-inscripcion a{
-    cursor: pointer;
-    text-decoration: none;
-    text-transform: capitalize;
-    border: 2px solid transparent;
-    color: var(--w);
-    font-size: 1rem;
-    letter-spacing: 2px;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    transition: var(--transition);
-}
-
-.nav-container .nav-btn a:hover,
-.nav-container .nav-btn a:focus{
-    border-bottom: 2px solid var(--blue);
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.nav-inscripcion .inscribir{
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--w);
-    background-color: var(--blue);
-    border: 2px solid var(--void_blue);
-    border-radius: 8px;
-    text-transform: uppercase;
-    padding: 1rem;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: var(--transition);
-}
-
-.nav-inscripcion .inscribir:hover,
-.nav-inscripcion .inscribir:focus{
-    color: var(--w2);
-    border: 2px solid var(--blue);
-    background-color: var(--void_blue);
-    letter-spacing: 3px;
-}
-
-/* ############ */
-.header:hover{
-    background: var(--void_blue);
-    transition: all 500ms ease;
-}
-
-.btn-logo{
-    color: var(--w);
-    text-decoration: none;
-}
-
 /* ==== VIDEO TITLE ==== */
 .section{
     width: 100%;
@@ -274,12 +201,14 @@ header .nav-container{
 }
 
 .showcase-img{
-    height: 450px;
     width: 380px;
+
+    max-height: 450px;
+    max-width: 380px;
 
     overflow: hidden;
     position: relative;
-    display: inline-block;
+    /*display: inline-block;*/
     margin: 0;
     border-radius: 10px;
 }
