@@ -857,7 +857,7 @@ footer{
 .footer-container{
     font-size: 1rem;
 
-    margin: 1.2rem auto;
+    margin: 1.2em auto;
     padding:1em 2em;
     color:var(--w2);
     max-width: 55em;
@@ -873,17 +873,11 @@ footer{
 }
 
 .botones a{
+    cursor: pointer;
     text-decoration: none;
     color: var(--w2);
-    padding: 0.5rem;
-    border-radius: 10px;
-    border: 2px solid var(--void);
+    padding: 1em;
     box-shadow: var(--shadow);
-}
-
-.botones a:hover,
-.botones a:focus{
-    border: 1.5px solid var(--blue);
 }
 
 .custom-shape-divider-bottom-1629585552 {
@@ -1001,6 +995,12 @@ footer{
     /* GARANTIA */
     .garantia-container{
         font-size: 1rem;
+        padding: 1em 0;
+    }
+
+    .garantia-container {
+        font-size: 1rem;
+        flex-direction: column;
     }
 
     /* Q&A */
@@ -1034,6 +1034,8 @@ footer{
         transform-origin: center;
     }
 
-
-
+    /* FOOTER */
+    .footer-container{
+        font-size: 1rem;
+    }
 }
