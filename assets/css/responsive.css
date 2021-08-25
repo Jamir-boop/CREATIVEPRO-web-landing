@@ -1,0 +1,192 @@
+@media all and (max-width: 1200px){
+    header .nav-container{
+        position: fixed;
+        bottom: 0;
+        z-index: 10;
+
+        background: rgba(57, 61, 70, 0.95);
+        backdrop-filter: blur(10px);
+
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+    }
+
+    .nav-inscripcion .inscribir{
+        font-size: 1rem;
+        padding: 0.4em;
+    }
+
+    .carrito{
+        display: inline;
+    }
+
+    .nav-inscripcion .inscribir .text_blue_btn{
+        display: none;
+    }
+
+    .nav-container .nav-btn{
+        display: none;
+    }
+
+    .nav-logo{
+        width: auto;
+        display: grid;
+        place-items: center;
+    }
+
+    .btn-logo{
+        font-size: 2rem;
+    }
+
+    .nav-menu{
+        display: grid;
+        text-decoration: none;
+        place-items: center;
+    }
+}
+
+
+@media all and (max-width: 400px){
+    .btn-logo{
+        font-size: 1rem;
+    }
+}
+
+
+@media all and (max-width: 600px){
+    /* SHOWCASE */
+    .showcase-container-listnimg{
+        grid-template-columns: 1fr;
+    }
+
+    .showcase-title{
+        font-size: 1.5rem;
+    }
+
+    .showcase-list ul{
+        font-size: 1rem;
+        max-width: 350px;
+        padding: 1em;
+    }
+
+    .showcase-img{
+        margin: .125em;
+    }
+
+    .showcase-img img{
+        width: 95%;
+        align-items: center;
+        clip-path: none;
+    }
+}
+
+@media all and (max-width: 1000px){
+
+    /* CARTA */
+    .carta-center{
+        height: auto;
+    }
+
+    .carta-container{
+        max-width: 800px;
+        margin: 0 auto;
+        position: initial;
+        transform: none;
+    }
+
+    .carta{
+        flex-direction: column;
+    }
+
+    .carta-text{
+        padding: 0 1em;
+    }
+
+    /* NOTICIAS */
+    .section-noticias{
+        height: auto;
+        padding: 1em 0;
+    }
+
+    .noticias .noticia-bloque img{
+        max-width: 300px;
+    }
+
+    /* PRODUCTO */
+    .producto-title img ,
+    .oferta-especial img{
+        max-width: 300px;
+    }
+
+    .producto-title {
+        font-size: 1rem;
+    }
+
+    .bonus-unit{
+        display: flex;
+        flex-direction: column;
+        margin: 1em 0;
+        padding: 1em .5em;
+        justify-content: center;
+    }
+
+    .bonus-unit img {
+        margin: 0 auto;
+    }
+
+    /* ESTUDIANTES */
+    .section-estudiantes{
+        font-size: 1rem;
+    }
+
+    .estudiantes_title{
+        font-size: 1.1rem;
+    }
+
+    /* GARANTIA */
+    .garantia-container{
+        font-size: 1rem;
+        padding: 1em 0;
+    }
+
+    .garantia-container {
+        font-size: 1rem;
+        flex-direction: column;
+    }
+
+    /* Q&A */
+    .section_QA{
+       margin: 2em 0 10em;
+    }
+
+    .QA_container{
+        font-size: 1rem;
+        grid-gap: 8em;
+    }
+
+    .pregunta::before{
+        content: attr(data-tooltip);
+        padding: 1rem;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+
+        font-size: 1rem;
+    }
+
+    .pregunta::before,
+    .pregunta::after{
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(50%) scale(1);
+        transition: 120ms transform;
+        transform-origin: center;
+    }
+
+    /* FOOTER */
+    .footer-container{
+        font-size: 1rem;
+    }
+}
