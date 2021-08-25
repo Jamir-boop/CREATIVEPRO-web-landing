@@ -1,0 +1,10 @@
+.portfolio_container > div img{
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.part1, .part2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    place-items: center;
+}

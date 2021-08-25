@@ -3,12 +3,20 @@ header .nav-container{
     display: grid;
     grid-template-columns: 20% 60% 20%;
     padding: 1.1em 0;
+    -webkit-box-shadow: 0px 0px 23px 5px rgba(0,0,0,0.35);
+    box-shadow: 0px 0px 23px 5px rgba(0,0,0,0.35);
 }
 
-.nav-container .nav-logo,
+.nav-logo{
+    /*width: 248px;*/
+    padding: 0 0.2em;
+    text-align: center;
+}
+
 .nav-container .nav-inscripcion{
     display: grid;
     place-items: center;
+    text-align: center;
 }
 
 .nav-container .nav-btn{
@@ -16,24 +24,23 @@ header .nav-container{
     align-items: center;
 }
 
-.nav-btn a,
-.nav-inscripcion a{
+.nav-btn button,
+.nav-inscripcion button{
     cursor: pointer;
-    text-decoration: none;
-    text-transform: capitalize;
     border: 2px solid transparent;
     color: var(--w);
+    background: transparent;
     font-size: 1rem;
     letter-spacing: 2px;
     padding: 0.5rem 1rem 0.5rem 1rem;
-    transition: var(--transition);
+    transition: border-bottom 500ms ease-in-out,
+font-weight 200ms ease;
 }
 
-.nav-container .nav-btn a:hover,
-.nav-container .nav-btn a:focus{
+.nav-container .nav-btn button:hover,
+.nav-container .nav-btn button:focus{
     border-bottom: 2px solid var(--blue);
     font-weight: bold;
-    letter-spacing: 1px;
 }
 
 .nav-inscripcion .inscribir{
@@ -44,8 +51,8 @@ header .nav-container{
     border: 2px solid var(--void_blue);
     border-radius: 8px;
     text-transform: uppercase;
-    padding: 1rem;
     font-size: 1rem;
+    padding: 1rem;
     font-weight: bold;
     transition: var(--transition);
 }
@@ -54,17 +61,85 @@ header .nav-container{
 .nav-inscripcion .inscribir:focus{
     color: var(--w2);
     border: 2px solid var(--blue);
-    background-color: var(--void_blue);
-    letter-spacing: 3px;
+    background-color: transparent;
+}
+
+.carrito {
+    display: none;
 }
 
 /* ############ */
 .header:hover{
-    background: var(--void_blue);
+    -webkit-box-shadow: 0px 0px 23px 5px rgba(0,0,0,0.35);
+    box-shadow: 0px 0px 23px 5px rgba(0,0,0,0.35);
+
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+
     transition: all 500ms ease;
 }
 
 .btn-logo{
     color: var(--w);
     text-decoration: none;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.nav-menu{
+    display: none;
+}
+
+@media all and (max-width: 1200px){
+    header .nav-container{
+        position: fixed;
+        bottom: 0;
+        z-index: 10;
+
+        background: rgba(57, 61, 70, 0.95);
+        backdrop-filter: blur(10px);
+
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+    }
+
+    .nav-inscripcion .inscribir{
+        font-size: 1rem;
+        padding: 0.4em;
+    }
+
+    .carrito{
+        display: inline;
+    }
+
+    .nav-inscripcion .inscribir .text_blue_btn{
+        display: none;
+    }
+
+    .nav-container .nav-btn{
+        display: none;
+    }
+
+    .nav-logo{
+        width: auto;
+        display: grid;
+        place-items: center;
+    }
+
+    .btn-logo{
+        font-size: 2rem;
+    }
+
+    .nav-menu{
+        display: grid;
+        text-decoration: none;
+        place-items: center;
+    }
+}
+
+
+@media all and (max-width: 400px){
+    .btn-logo{
+        font-size: 1rem;
+    }
 }

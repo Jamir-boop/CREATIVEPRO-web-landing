@@ -2,9 +2,12 @@
 
 <!--===================== BG VIDEO  =====================-->
 <div class="bg-video">
-    <video autoplay muted loop id="bg-video" >
+    <video autoplay muted loop id="bg-video" hidden >
         <source src="assets/image/video.mov" type="video/mp4">
     </video>
+    
+    <div class="bg_imagen">
+    </div>
 </div>
 
 <?php include 'templates/barra_navegacion.php'?>
@@ -23,7 +26,7 @@
         </div>
 
         <div class="video-title">
-            <iframe width="640" height="360" src="https://www.youtube.com/embed/bfuPJ7qGe1Y?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/bfuPJ7qGe1Y?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
         </div>
 
         <div class="sec-title">
@@ -157,44 +160,38 @@
 </section>
 
 <!--===================== CARTA =====================-->
-<section class="section-carta section">
+<section class="section-carta section" id="seccion1">
 
-    <div class="carta-container">
+    <div class="carta-center">
+        <div class="carta-container">
 
-        <div class="carta carta-row">
-            <div class="imagen-carta carta1">
-                <img src="assets/image/sebastian.jpg" alt="img carta">
-            </div>
+                <div class="carta">
+                    <div class="imagen-carta carta1">
+                        <img src="assets/image/sebastian2.jpg" alt="img carta">
+                    </div>
 
-            <div class="text-carta carta-text">
-                <span><b>DE:</b> Lorem ipsum.</span>
-                <br>
-                <span><b>PARA:</b> ti</span>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A exercitationem hic incidunt ipsum optio quas quibusdam tempore. Ab, accusamus aliquid in labore numquam odit quo repellendus tempore voluptate. Animi corporis eligendi ex neque omnis perspiciatis quaerat quis quos rerum sequi, suscipit ut. Alias fugiat, laborum neque optio quam qui vero.
-                </p>
-                <br>
-                <i>Sebastian Bronley</i>
-            </div>
+                    <div class="carta-text">
+                        <span><b>DE:</b> Lorem ipsum.</span>
+                        <br>
+                        <span><b>PARA:</b> ti</span>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A exercitationem hic incidunt ipsum optio quas quibusdam tempore. Ab, accusamus aliquid in labore numquam odit quo repellendus tempore voluptate. Animi corporis eligendi ex neque omnis perspiciatis quaerat quis quos rerum sequi, suscipit ut. Alias fugiat, laborum neque optio quam qui vero.
+                        </p>
+                        <i class="nombre">Sebastian Bronley</i>
+                    </div>
+                </div>
+
+                <div class="lista">
+                    <ul>
+                        <h1>Lorem ipsum dolor sit.</h1>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, ratione?</li>
+                        <li>Commodi incidunt laboriosam molestiae molestias quisquam reiciendis saepe similique ut.</li>
+                        <li>Magnam modi nisi non quia sequi sit sunt tempora voluptate.</li>
+                        <li>Aliquid, architecto dignissimos doloremque fugit labore numquam ratione saepe voluptates?</li>
+                        <li>Deleniti itaque libero molestias perferendis voluptatem. Ab porro quia repellat?</li>
+                    </ul>
+                </div>
         </div>
-
-        <div class="carta-lista carta-row">
-            <div class="text-lista carta-text">
-                <ul>
-                    <h1>Lorem ipsum dolor sit.</h1>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, ratione?</li>
-                    <li>Commodi incidunt laboriosam molestiae molestias quisquam reiciendis saepe similique ut.</li>
-                    <li>Magnam modi nisi non quia sequi sit sunt tempora voluptate.</li>
-                    <li>Aliquid, architecto dignissimos doloremque fugit labore numquam ratione saepe voluptates?</li>
-                    <li>Deleniti itaque libero molestias perferendis voluptatem. Ab porro quia repellat?</li>
-                </ul>
-            </div>
-
-            <div class="imagen-carta">
-                <img src="assets/image/encontrar.svg" alt="img carta">
-            </div>
-        </div>
-
     </div>
 
 </section>
@@ -221,7 +218,7 @@
 </section>
 
 <!--===================== PRODUCTO  =====================-->
-<section class="section-producto section">
+<section class="section-producto section" id="seccion2">
 
     <div class="producto-main">
         <div class="producto-title">
@@ -327,7 +324,7 @@
 
     </div>
 
-    <div class="producto-pricing">
+    <div class="producto-pricing" id="seccion3">
         <h1>Lorem ipsum dolor sit amet.</h1>
         <h2>399 lorem</h2>
     </div>
@@ -568,7 +565,7 @@
 </section>
 
 <!--===================== Q&A  =====================-->
-<section class="section_QA section">
+<section class="section_QA section" id="seccion4">
 
     <h1>Preguntas Frecuentes</h1>
     <div class="QA_container">
@@ -612,6 +609,5 @@
     </div>
 
 </section>
-
 <?php include 'templates/footer.php'?>
 <?php include 'templates/foot.php'?>
