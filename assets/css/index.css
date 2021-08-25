@@ -321,13 +321,19 @@ body::-webkit-scrollbar-thumb{
     width: 100%;
 }
 .carta-center{
+    height: 100vh;
     background-color: var(--w);
     color: var(--void);
+    position: relative;
 }
 
 .carta-container{
     max-width: 800px;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .carta{
@@ -356,7 +362,8 @@ body::-webkit-scrollbar-thumb{
 /* ==== NOTICIAS ==== */
 .section-noticias{
     text-align: center;
-    margin: 0 0 40px 0;
+    height: 100vh;
+    padding: 3em 1em;
 }
 
 .title-noticias h2{
@@ -437,7 +444,8 @@ body::-webkit-scrollbar-thumb{
 }
 
 .bonus-title h1{
-    text-decoration: 0.25em underline var(--fucshia);
+    text-decoration: 0.125em underline var(--fucshia);
+    text-underline-offset: .3em;
 }
 
 .producto-bonus{
@@ -930,12 +938,55 @@ footer{
 @media all and (max-width: 1000px){
 
     /* CARTA */
+    .carta-center{
+        height: auto;
+    }
+
+    .carta-container{
+        max-width: 800px;
+        margin: 0 auto;
+        position: initial;
+        transform: none;
+    }
+
     .carta{
         flex-direction: column;
     }
 
     .carta-text{
         padding: 0 1em;
+    }
+
+    /* NOTICIAS */
+    .section-noticias{
+        height: auto;
+        padding: 1em 0;
+    }
+
+    .noticias .noticia-bloque img{
+        max-width: 300px;
+    }
+
+    /* PRODUCTO */
+    .producto-title img ,
+    .oferta-especial img{
+        max-width: 300px;
+    }
+
+    .producto-title {
+        font-size: 1rem;
+    }
+
+    .bonus-unit{
+        display: flex;
+        flex-direction: column;
+        margin: 1em 0;
+        padding: 1em .5em;
+        justify-content: center;
+    }
+
+    .bonus-unit img {
+        margin: 0 auto;
     }
 
     /* ESTUDIANTES */
@@ -946,4 +997,43 @@ footer{
     .estudiantes_title{
         font-size: 1.1rem;
     }
+
+    /* GARANTIA */
+    .garantia-container{
+        font-size: 1rem;
+    }
+
+    /* Q&A */
+    .section_QA{
+       margin: 2em 0 10em;
+    }
+
+    .QA_container{
+        font-size: 1rem;
+        grid-gap: 8em;
+    }
+
+    .pregunta::before{
+        content: attr(data-tooltip);
+        padding: 1rem;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+
+        font-size: 1rem;
+    }
+
+    .pregunta::before,
+    .pregunta::after{
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(50%) scale(1);
+        transition: 120ms transform;
+        transform-origin: center;
+    }
+
+
+
 }
