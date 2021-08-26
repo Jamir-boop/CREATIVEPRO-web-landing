@@ -1,4 +1,14 @@
 @media all and (max-width: 1200px){
+
+    body{
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    body::-webkit-scrollbar{
+        display: none;
+    }
+
     header .nav-container{
         background: rgba(57, 61, 70, 0.95);
         backdrop-filter: blur(10px);
@@ -44,16 +54,9 @@
 @media all and (max-width: 1000px){
 
     /* CARTA */
-    .carta-container{
-        max-width: 400px;
-    }
 
     .carta{
-        grid-template-columns: 1fr;
-    }
-
-    .carta-text{
-        padding: 0 1em;
+        /*grid-template-columns: 1fr;*/
     }
 
     /* NOTICIAS */

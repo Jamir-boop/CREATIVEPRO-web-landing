@@ -317,21 +317,19 @@ body::-webkit-scrollbar-thumb{
 }
 
 /* ==== CARTA ==== */
-.section-carta{
-}
-
 .carta-center{
     background-color: var(--w);
     color: var(--void);
 }
 
 .carta-container{
-    display: grid;
+    /*display: grid;*/
     place-items: center;
+    padding: 0 1em;
 }
 
 .carta{
-    display: grid;
+    /*display: grid;*/
     place-items: center;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
