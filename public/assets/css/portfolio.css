@@ -1,0 +1,25 @@
+.portfolio_container{
+}
+
+.portfolio_container .part1 div{
+    width: 400px;
+    height: 450px;
+    transition: all 200ms ease;
+}
+
+.portfolio_container .part1 div img{
+    width: 420px;
+}
+
+.part1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    place-items: center;
+    box-sizing: border-box;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+}
+
+.portfolio_container .part1 div:hover{
+    transform: scale(1.125, 1.125);
+}

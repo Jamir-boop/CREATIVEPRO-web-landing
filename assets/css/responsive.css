@@ -14,16 +14,13 @@
         backdrop-filter: blur(10px);
 
         grid-template-columns: 1fr 1fr;
+        grid-gap: 5em;
         width: 100%;
     }
 
     .nav-inscripcion .inscribir{
         font-size: 1rem;
         padding: 0.4em;
-    }
-
-    .carrito{
-        display: inline;
     }
 
     .nav-inscripcion .inscribir .text_blue_btn{
