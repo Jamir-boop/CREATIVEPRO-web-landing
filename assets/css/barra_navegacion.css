@@ -1,3 +1,28 @@
+
+/* ==== SCROLL TOP ==== */
+.scroll_top{
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    background: var(--fucshia);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: var(--w);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 20;
+    margin: 10px;
+}
+
+.scroll_top:active{
+    background-color: #b10450;
+}
+
 /* ==== BARRA ==== */
 header .nav-container{
     display: grid;
@@ -25,7 +50,8 @@ header .nav-container{
 }
 
 .nav-btn button,
-.nav-inscripcion button{
+.nav-inscripcion button,
+#overlay_menu button{
     cursor: pointer;
     border: 2px solid transparent;
     color: var(--w);
@@ -38,7 +64,9 @@ font-weight 200ms ease;
 }
 
 .nav-container .nav-btn button:hover,
-.nav-container .nav-btn button:focus{
+.nav-container .nav-btn button:focus,
+#overlay_menu button:hover,
+#overlay_menu button:focus{
     border-bottom: 2px solid var(--blue);
     font-weight: bold;
 }
@@ -74,7 +102,7 @@ font-weight 200ms ease;
     box-shadow: 0px 0px 23px 5px rgba(0,0,0,0.35);
 
     background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
+    /*backdrop-filter: blur(10px);  sacrificio*/
 
     transition: all 500ms ease;
 }
@@ -88,4 +116,36 @@ font-weight 200ms ease;
 
 .nav-menu{
     display: none;
+}
+
+.overlay_menu_container{
+    position: relative;
+}
+
+#overlay_menu{
+    font-size: 2rem !important;
+
+    background: var(--void);
+    opacity: .9;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+
+    overflow-y: auto;
+    z-index: 20;
+    transform: scale(0);
+    transition: scale 200ms ease;
+}
+
+#overlay_menu.active{
+    transform: scale(1);
+}
+
+#overlay_menu ul li{
+    list-style: none;
 }

@@ -1,4 +1,4 @@
-body{
+body {
     background-color: var(--void);
     color: var(--w);
     overflow-x: hidden;
@@ -42,7 +42,7 @@ body::-webkit-scrollbar-thumb{
     opacity: 0.1;
 
     background: url("../image/demo_bg.jpeg");
-    background-size: contain;
+    background-size: 100%;
 }
 
 /* ==== VIDEO TITLE ==== */
@@ -318,28 +318,22 @@ body::-webkit-scrollbar-thumb{
 
 /* ==== CARTA ==== */
 .section-carta{
-    width: 100%;
 }
+
 .carta-center{
-    height: 100vh;
     background-color: var(--w);
     color: var(--void);
-    position: relative;
 }
 
 .carta-container{
-    max-width: 800px;
-    /*margin: 0 auto;*/
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
 }
 
 .carta{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 
 .imagen-carta{
@@ -470,6 +464,10 @@ body::-webkit-scrollbar-thumb{
     backdrop-filter: blur(10px);
 
     box-shadow: var(--shadow);
+}
+
+.bonus-unit .not-show{
+    display: none;
 }
 
 .bonus-unit img{

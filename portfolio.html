@@ -21,6 +21,25 @@
     </head>
 <body>
 
+<!--===================== SCROLL TOP =====================-->
+<button class="scroll_top">
+    <span class="material-icons-outlined">
+        arrow_upward
+    </span>
+</button>
+
+<script>
+    const btn_scroll = document.querySelector('.scroll_top');
+
+    btn_scroll.addEventListener('click', function (){
+        window.scrollTo({
+            top:0,
+            left:0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+
 <!--===================== BARRA DE NAVEGACION =====================-->
 <header class="header">
     <nav class="nav-container">
@@ -43,7 +62,7 @@
         </div>
 
         <div class="nav-menu">
-            <a href="#" style="color: var(--w);">
+            <a href="#" style="color: var(--w);" onclick="overlay_menu_toggle()">
                 <span class="material-icons-outlined" style="font-size: 2rem;">
                 menu
                 </span>
@@ -60,12 +79,44 @@
             </a>
 
         </div>
-
     </nav>
+
+    <div id="overlay_menu">
+        <ul>
+            <li style="text-align: right;">
+                <button onclick="overlay_menu_toggle()">
+                    <span class="material-icons-outlined">
+                        close
+                    </span>
+                </button>
+            </li>
+            <li>
+                <button class="scrollto" data-link="seccion1" >Conocenos</button>
+            </li>
+            <li>
+                <button class="scrollto" data-link="seccion2" >Master Class</button>
+            </li>
+            <li>
+                <button class="scrollto" data-link="seccion3" >Precios</button>
+            </li>
+            <li>
+                <button class="scrollto" data-link="seccion4" >Preguntas Frecuentes</button>
+            </li>
+            <li>
+                <form action="portfolio.html">
+                    <button type="submit" >Portfolio</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+    <script defer src="assets/js/overlay_menu.js"></script>
+
 </header>
 <script defer src="assets/js/barra_navegacion.js"></script>
 <script defer src="assets/js/nav_onload.js"></script>
 
+
+<!--===================== PORTFOLIO =====================-->
 <section class="portfolio_section section">
 
     <div class="portfolio_container">

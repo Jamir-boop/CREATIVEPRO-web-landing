@@ -18,9 +18,27 @@
         <link rel="stylesheet" href="assets/css/portfolio.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
 
-
     </head>
 <body>
+
+<!--===================== SCROLL TOP =====================-->
+<button class="scroll_top">
+    <span class="material-icons-outlined">
+        arrow_upward
+    </span>
+</button>
+
+<script>
+    const btn_scroll = document.querySelector('.scroll_top');
+
+    btn_scroll.addEventListener('click', function (){
+        window.scrollTo({
+            top:0,
+            left:0,
+            behavior: 'smooth'
+        });
+    });
+</script>
 
 <!--===================== BARRA DE NAVEGACION =====================-->
 <header class="header">
@@ -44,7 +62,7 @@
         </div>
 
         <div class="nav-menu">
-            <a href="#" style="color: var(--w);">
+            <a href="#" style="color: var(--w);" onclick="overlay_menu_toggle()">
                 <span class="material-icons-outlined" style="font-size: 2rem;">
                 menu
                 </span>
@@ -61,8 +79,38 @@
             </a>
 
         </div>
-
     </nav>
+
+    <div id="overlay_menu">
+        <ul>
+            <li style="text-align: right;">
+                <button onclick="overlay_menu_toggle()">
+                    <span class="material-icons-outlined">
+                        close
+                    </span>
+                </button>
+            </li>
+            <li>
+                <button class="scrollto" data-link="seccion1" >Conocenos</button>
+            </li>
+            <li>
+                <button class="scrollto" data-link="seccion2" >Master Class</button>
+            </li>
+            <li>
+                <button class="scrollto" data-link="seccion3" >Precios</button>
+            </li>
+            <li>
+                <button class="scrollto" data-link="seccion4" >Preguntas Frecuentes</button>
+            </li>
+            <li>
+                <form action="portfolio.html">
+                    <button type="submit" >Portfolio</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+    <script defer src="assets/js/overlay_menu.js"></script>
+
 </header>
 <script defer src="assets/js/barra_navegacion.js"></script>
 <script defer src="assets/js/nav_onload.js"></script>
@@ -219,7 +267,7 @@
         </div>
 
         <div class="sell-btn-inscribirse">
-            <a href="#" class="main-sell">ordenar ahora!</a>
+            <a href="#" class="main-sell">comprar!</a>
         </div>
 
     </div>
@@ -358,6 +406,7 @@
         </div>
 
         <div class="unit-container">
+
             <div class="bonus-unit">
                 <img src="assets/image/product_unit.png" alt="">
                 <div class="bonus-text">
@@ -365,13 +414,16 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem eius esse hic incidunt officia quam quia ratione tempore, voluptatum.</p>
                 </div>
             </div>
+
             <div class="bonus-unit">
+                <img src="assets/image/product_unit.png" alt="" class="not-show">
                 <div class="bonus-text">
                     <h1>Lorem ipsum dolor sit amet.</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem deserunt esse eveniet magnam perferendis praesentium rem rerum saepe ullam voluptate!</p>
                 </div>
-                <img src="assets/image/product_unit.png" alt="">
+                <img src="assets/image/product_unit.png" alt="" class="yes-show">
             </div>
+
             <div class="bonus-unit">
                 <img src="assets/image/product_unit.png" alt="">
                 <div class="bonus-text">
@@ -379,12 +431,14 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae consequatur dolore iste molestias nulla omnis quia ullam! Aspernatur, maiores.</p>
                 </div>
             </div>
+
             <div class="bonus-unit">
+                <img src="assets/image/product_unit.png" alt="" class="not-show">
                 <div class="bonus-text">
                     <h1>Lorem ipsum dolor sit amet.</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, debitis dicta doloribus eveniet expedita perspiciatis repudiandae sit totam veritatis vero!</p>
                 </div>
-                <img src="assets/image/product_unit.png" alt="">
+                <img src="assets/image/product_unit.png" alt="" class="yes-show">
             </div>
         </div>
 
@@ -466,16 +520,16 @@
         <div>
             <p class="grid_text">Lorem ipsum dolor sit</p>
         </div>
-        <div>
+        <div class="grid-not-show" >
             <img src="assets/image/grid_4.jpg" alt="grid image">
         </div>
-        <div>
+        <div class="grid-not-show" >
             <p class="grid_text">Lorem ipsum dolor sit</p>
         </div>
-        <div>
+        <div class="grid-not-show" >
             <img src="assets/image/grid_9.jpg" alt="grid image">
         </div>
-        <div>
+        <div class="grid-not-show" >
             <p class="grid_text">Lorem ipsum dolor sit</p>
         </div>
 

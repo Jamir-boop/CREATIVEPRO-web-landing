@@ -5,9 +5,11 @@
 .idea/inspectionProfiles/*
 .github/*
 .github/workflows/*
+.firebase
 .firebase/*
 .firebaserc
 .firebase.json
+.public
 .public/*
 .vscode/*
 .assets/css/test.css
