@@ -13,7 +13,7 @@
         background: rgba(57, 61, 70, 0.95);
         backdrop-filter: blur(10px);
 
-        grid-template-columns: 1fr 0.5fr 0.5fr;
+        grid-template-columns: 1fr 1fr;
         width: 100%;
     }
 
@@ -56,7 +56,7 @@
     /* CARTA */
 
     .carta{
-        /*grid-template-columns: 1fr;*/
+        grid-template-columns: 1fr;
     }
 
     /* NOTICIAS */
