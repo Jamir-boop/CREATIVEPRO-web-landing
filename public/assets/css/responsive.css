@@ -1,0 +1,243 @@
+@media all and (max-width: 1200px){
+
+    body{
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    body::-webkit-scrollbar{
+        display: none;
+    }
+
+    header .nav-container{
+        background: rgba(57, 61, 70, 0.95);
+        backdrop-filter: blur(10px);
+
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
+    .nav-inscripcion .inscribir{
+        font-size: 1rem;
+        padding: 0.4em;
+    }
+
+    .carrito{
+        display: inline;
+    }
+
+    .nav-inscripcion .inscribir .text_blue_btn{
+        display: none;
+    }
+
+    .nav-container .nav-btn{
+        display: none;
+    }
+
+    .nav-logo{
+        width: auto;
+        display: grid;
+        place-items: center;
+    }
+
+    .btn-logo{
+        font-size: 1.8rem;
+    }
+
+    .nav-menu{
+        display: grid;
+        text-decoration: none;
+        place-items: center;
+    }
+}
+
+@media all and (max-width: 1000px){
+
+    /* CARTA */
+
+    .carta{
+        grid-template-columns: 1fr;
+    }
+
+    /* NOTICIAS */
+    .section-noticias{
+        height: auto;
+        padding: 1em 0;
+    }
+
+    .noticias .noticia-bloque img{
+        max-width: 300px;
+    }
+
+    /* PRODUCTO */
+    .producto-title img ,
+    .oferta-especial img{
+        max-width: 300px;
+    }
+
+    .producto-title {
+        font-size: 1rem;
+    }
+
+    .bonus-unit{
+        display: flex;
+        flex-direction: column;
+        margin: 1em 0;
+        padding: 1em .5em;
+        justify-content: center;
+    }
+
+    .bonus-unit .not-show{
+       display: inline;
+    }
+
+    .bonus-unit .yes-show{
+       display: none;
+    }
+
+    .bonus-unit img {
+        margin: 0 auto;
+    }
+
+    .sell-btn-inscribirse{
+        display: grid;
+        place-items: center;
+        margin: 1.5rem 1rem;
+    }
+
+    .sell-btn-inscribirse a{
+        font-size: 2rem;
+
+        padding: 0.25em 1em;
+
+        text-shadow: 0 0 0.125em #00ffffe6, 0 0 0.25em var(--blue);
+        box-shadow: inset 0 0 0.5em 0 var(--blue), 0 0 0.5em 0 var(--blue);
+    }
+
+    .sell-btn-inscribirse a::before{
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        background-color: var(--blue);
+
+        top: 120%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: perspective(2em) rotateX(40deg);
+        filter: blur(0.7em);
+        opacity: 0.6;
+    }
+
+    /* ESTUDIANTES */
+    .section-estudiantes{
+        font-size: 1rem;
+    }
+
+    .estudiantes_title{
+        font-size: 1.1rem;
+    }
+
+    /* GARANTIA */
+    .garantia-container{
+        font-size: 1rem;
+        padding: 1em 0;
+    }
+
+    .garantia-container {
+        font-size: 1rem;
+        flex-direction: column;
+    }
+
+    /* Q&A */
+    .section_QA{
+       margin: 2em 0 10em;
+    }
+
+    .QA_container{
+        font-size: 1rem;
+        grid-gap: 8em;
+    }
+
+    .pregunta::before{
+        content: attr(data-tooltip);
+        padding: 1rem;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+
+        font-size: 1rem;
+    }
+
+    .pregunta::before,
+    .pregunta::after{
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(50%) scale(1);
+        transition: 120ms transform;
+        transform-origin: center;
+    }
+
+    /* FOOTER */
+    .footer-container{
+        font-size: 1rem;
+    }
+}
+
+@media all and (max-width: 600px){
+    /* SHOWCASE */
+    .showcase-container-listnimg{
+        grid-template-columns: 1fr;
+        padding: 2em 0;
+    }
+
+    .showcase-title{
+        font-size: 1.5rem;
+    }
+
+    .showcase-list ul{
+        font-size: 1rem;
+        max-width: 300px;
+        padding: 1em;
+    }
+
+    .showcase-img{
+        width: 300px;
+        margin: .125em;
+    }
+
+    .showcase-img img{
+        width: 100%;
+        clip-path: none;
+    }
+
+    /* GRID */
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1em;
+        grid-row-gap: 1em;
+    }
+
+    .grid-container div{
+        font-size: 1.7rem;
+
+        height: 150px;
+
+        min-width: 150px;
+        min-height: 150px;
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .grid-container div img{
+        width: 180px;
+    }
+}
+
+@media all and (max-width: 400px){
+    .btn-logo{
+        font-size: 1rem;
+    }
+}
