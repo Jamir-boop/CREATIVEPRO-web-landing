@@ -17,9 +17,44 @@
         <link rel="stylesheet" href="assets/css/index.css">
         <link rel="stylesheet" href="assets/css/portfolio.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     </head>
 <body>
+
+<!--===================== LOADER =====================-->
+
+<div class="load_container" id="load_container">
+    <div class="load">
+        <img src="assets/image/load_css.svg" alt="" width="100">
+    </div>
+</div>
+<script>
+    let svg_load = document.getElementById("load_container");
+
+    window.addEventListener("load", function(){
+        svg_load.parentElement.removeChild(svg_load);
+    });
+</script>
+
+<!--===================== SCROLL TOP =====================-->
+<button class="scroll_top">
+    <span class="material-icons-outlined">
+        arrow_upward
+    </span>
+</button>
+
+<script>
+    const btn_scroll = document.querySelector('.scroll_top');
+
+    btn_scroll.addEventListener('click', function (){
+        window.scrollTo({
+            top:0,
+            left:0,
+            behavior: 'smooth'
+        });
+    });
+</script>
 
 <!--===================== BARRA DE NAVEGACION =====================-->
 <header class="header">
@@ -48,17 +83,6 @@
                 menu
                 </span>
             </a>
-        </div>
-
-        <div class="nav-item nav-inscripcion">
-
-            <a href="#" class="inscribir scrollto" data-link="seccion1">
-                <span class="text_blue_btn"> Comprar! </span>
-                <span class="material-icons-outlined carrito">
-                    shopping_cart
-                </span>
-            </a>
-
         </div>
     </nav>
 
@@ -96,6 +120,9 @@
 <script defer src="assets/js/barra_navegacion.js"></script>
 <script defer src="assets/js/nav_onload.js"></script>
 
+<div class="bg_general">
+    <div class="bg"></div>
+</div>
 
 <!--===================== PORTFOLIO =====================-->
 <section class="portfolio_section section">
@@ -106,70 +133,70 @@
 <!--            <h1>Lorem ipsum dolor sit amet.</h1>-->
         </div>
         <div class="part1">
-            <div>
+            <div data-aos="fade-up" >
                 <img src="assets/image/demo_bg1.jpeg" alt="demo portfolio">
             </div>
-            <div>
+            <div data-aos="fade-up" >
                 <img src="assets/image/demo_bg.jpeg" alt="demo portfolio">
             </div>
-            <div>
+            <div data-aos="fade-up" >
                 <img src="assets/image/demo_bg2.jpeg" alt="demo portfolio">
             </div>
-            <div>
+            <div data-aos="fade-up" >
                 <img src="assets/image/demo_bg3.jpeg" alt="demo portfolio">
             </div>
-            <div>
+            <div data-aos="fade-up" >
                 <img src="assets/image/demo_bg4.jpeg" alt="demo portfolio">
             </div>
-            <div>
+            <div data-aos="fade-up" >
                 <img src="assets/image/demo_bg5.jpeg" alt="demo portfolio">
             </div>
-            <div>
+            <div data-aos="fade-up" >
                 <img src="assets/image/demo_bg6.jpeg" alt="demo portfolio">
             </div>
-            <div>
+            <div data-aos="fade-up">
                 <img src="assets/image/demo_bg7.jpeg" alt="demo portfolio">
             </div>
-            <div>
+            <div data-aos="fade-up">
                 <img src="assets/image/demo_bg15.jpeg" alt="demo portfolio">
             </div>
-            <div>
+            <div data-aos="fade-up" >
                 <img src="assets/image/demo_bg9.jpeg" alt="demo portfolio">
             </div>
-            <div>
+            <div data-aos="fade-up" >
                 <img src="assets/image/grid_3.jpg" alt="demo portfolio">
             </div>
-            <div>
+            <div data-aos="fade-up" >
                 <img src="assets/image/demo_bg11.jpeg" alt="demo portfolio">
             </div>
-            <div>
+            <div data-aos="fade-up" >
                 <img src="assets/image/demo_bg12.jpeg" alt="demo portfolio">
             </div>
-            <div>
+            <div data-aos="fade-up">
                 <img src="assets/image/demo_bg13.jpeg" alt="demo portfolio">
             </div>
-            <div>
+            <div data-aos="fade-up" >
                 <img src="assets/image/demo_bg14.jpeg" alt="demo portfolio">
             </div>
-            <div>
+            <div data-aos="fade-up">
                 <img src="assets/image/demo_bg8.jpeg" alt="demo portfolio">
             </div>
-            <div>
+            <div data-aos="fade-up" >
                 <img src="assets/image/demo_bg16.jpeg" alt="demo portfolio">
             </div>
-            <div>
+            <div data-aos="fade-up" >
                 <img src="assets/image/demo_bg17.jpeg" alt="demo portfolio">
             </div>
-            <div>
+            <div data-aos="fade-up" >
                 <img src="assets/image/demo_bg18.jpeg" alt="demo portfolio">
             </div>
-            <div>
+            <div data-aos="fade-up" >
                 <img src="assets/image/demo_bg19.jpeg" alt="demo portfolio">
             </div>
-            <div>
+            <div data-aos="fade-up" >
                 <img src="assets/image/demo_bg20.jpeg" alt="demo portfolio">
             </div>
-            <div>
+            <div data-aos="fade-up" >
                 <img src="assets/image/demo_bg21.jpeg" alt="demo portfolio">
             </div>
         </div>
@@ -206,6 +233,11 @@
         </svg>
     </div>
 </footer>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 </body>
 </html>

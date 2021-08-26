@@ -21,6 +21,24 @@ body::-webkit-scrollbar-thumb{
     background: var(--blue);
 }
 
+/* ==== LOADER ==== */
+
+.load_container{
+    position: relative;
+}
+
+.load_container .load{
+    position: fixed;
+    background: var(--void);
+
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+
+    display: grid;
+    place-items: center;
+}
+
 .bg_general{
     position: relative;
 }

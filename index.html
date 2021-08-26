@@ -17,9 +17,25 @@
         <link rel="stylesheet" href="assets/css/index.css">
         <link rel="stylesheet" href="assets/css/portfolio.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     </head>
 <body>
+
+<!--===================== LOADER =====================-->
+
+<div class="load_container" id="load_container">
+    <div class="load">
+        <img src="assets/image/load_css.svg" alt="" width="100">
+    </div>
+</div>
+<script>
+    let svg_load = document.getElementById("load_container");
+
+    window.addEventListener("load", function(){
+        svg_load.parentElement.removeChild(svg_load);
+    });
+</script>
 
 <!--===================== SCROLL TOP =====================-->
 <button class="scroll_top">
@@ -109,7 +125,7 @@
 </div>
 
 <!--===================== VIDEO TITLE =====================-->
-<section class="section-title section">
+<section data-aos="fade-up" class="section-title section">
     <div class="container-title">
 
         <div class="main-title">
@@ -134,7 +150,7 @@
 </section>
 
 <!--===================== CARDS =====================-->
-<section class="section-cards section ">
+<section data-aos="fade-left" class="section-cards section ">
     <div class="wrapper">
         <div class="card">
             <div class="card-image">
@@ -226,7 +242,7 @@
 </section>
 
 <!--===================== SHOWCASE MAIN BUTTON =====================-->
-<section class="section-showcase section">
+<section data-aos="fade-right" class="section-showcase section">
     <div class="showcase-container">
 
         <div class="showcase-container-listnimg">
@@ -269,7 +285,7 @@
 </section>
 
 <!--===================== CARTA =====================-->
-<section class="section-carta section" id="seccion1">
+<section data-aos="fade-left" class="section-carta section" id="seccion1">
 
     <div class="carta-center">
         <div class="carta-container">
@@ -306,7 +322,7 @@
 </section>
 
 <!--===================== NOTICIAS  =====================-->
-<section class="section-noticias section">
+<section data-aos="fade-up" class="section-noticias section">
 
     <div class="title-noticias">
         <h2>Lorem ipsum dolor sit.</h2>
@@ -327,7 +343,7 @@
 </section>
 
 <!--===================== PRODUCTO  =====================-->
-<section class="section-producto section" id="seccion2">
+<section data-aos="fade-up" class="section-producto section" id="seccion2">
 
     <div class="producto-main">
         <div class="producto-title">
@@ -477,7 +493,7 @@
 </section>
 
 <!--===================== GRID  =====================-->
-<section class="section-grid section">
+<section data-aos="fade-up" class="section-grid section">
 
     <h1>Lorem ipsum dolor sit amet, consectetur.</h1>
 
@@ -628,8 +644,7 @@
 </section>
 
 <!--===================== GARANTIA  =====================-->
-
-<section class="section-garantia section">
+<section data-aos="zoom-in" class="section-garantia section">
 
     <div class="garantia-container">
         <img src="assets/image/garantia.png" alt="garantia img">
@@ -645,7 +660,7 @@
 </section>
 
 <!--===================== PRODUCTO2  =====================-->
-<section class="section-producto section">
+<section data-aos="fade-up" class="section-producto section">
 
     <div class="oferta-especial">
         <h2>Lorem ipsum dolor sit amet.</h2>
@@ -755,5 +770,9 @@
     </div>
 </footer>
 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 </html>
