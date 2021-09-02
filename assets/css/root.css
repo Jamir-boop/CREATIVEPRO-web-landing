@@ -1,8 +1,9 @@
 :root{
-    --void: #212832;
+    /*--void: #212832;*/
+    --void: #000;
     --void_transparent: rgba(14, 11, 22, 0.38);
     --void_blue: #393D46;
-    --w: #EEEEEE;
+    --w: #ffff;
     --w2: #e7dfdd;
     --fucshia: #ec4a04;
     --blue: #0092CB;

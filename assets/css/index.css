@@ -54,7 +54,7 @@ body::-webkit-scrollbar-thumb{
     width: 100%;
     height: 100%;
     z-index: -10;
-    opacity: 0.1;
+    opacity: 0.3;
 }
 
 
@@ -64,7 +64,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 .section-title{
-    background: linear-gradient(0deg, rgba(57,61,70,1) 0%, rgba(57,61,70,0) 60%);
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(57,61,70,0) 60%);
     margin: 2rem 0 0;
 }
 
@@ -117,7 +117,7 @@ body::-webkit-scrollbar-thumb{
     place-items: center;
     margin-inline: 0;
 
-    background: var(--void_blue);
+    background: #000;
 }
 
 .section-cards .wrapper{
@@ -129,8 +129,9 @@ body::-webkit-scrollbar-thumb{
 }
 
 .card {
+    --ancho: 350px;
     background: white;
-    width: 300px;
+    width: var(--ancho);
     display: inline-block;
     margin: auto;
     border-radius: 10px;
@@ -147,19 +148,21 @@ body::-webkit-scrollbar-thumb{
   margin-bottom: 35px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  background: var(--void);
+  background: var(--w);
 }
 
 .card-image img {
-    width: 370px;
+    width: 200px;
     position: absolute;
-    top: -50px;
-    left: -20px;
+    top: 10px;
+    left: calc(var(--ancho)/5);
+
+    filter: invert(100%);
 }
 
 .sobre-titulo {
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 1rem;
     font-weight: 700;
     margin-bottom: 3px;
     color: var(--fucshia);
@@ -169,6 +172,7 @@ body::-webkit-scrollbar-thumb{
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 5px;
+    padding: .5em;
 }
 
 .card-desc {
@@ -298,28 +302,57 @@ body::-webkit-scrollbar-thumb{
 .carta{
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0;
+    max-width: 1187px;
 }
 
 .carta-text{
     width: 80%;
+    margin: 2em 0 0;
+}
+
+.carta-text span{
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+
+.carta-text p{
+    font-size: 1.2em;
 }
 
 .imagen-carta{
     margin: 2em;
-    outline: 2px solid var(--void);
-    outline-offset: 0.4em;
-
     max-width: 300px;
     max-height: 300px;
 }
+.imagen-carta-flex{
+    position: relative;
+}
 
-.imagen-carta img{
+.imagen-carta .imagen-carta-flex img{
+    outline: 2px solid var(--void);
+    outline-offset: 0.4em;
+
+    position: absolute;
+    inset: 0;
+    margin: auto;
     width: 300px;
 }
 
 .lista{
     padding: 2em 1em;
+}
+
+.lista ul h1{
+    font-size: 2rem;
+    text-decoration: underline;
+    text-underline-offset: .125em;
+}
+
+.lista ul li{
+    font-size: 1.4em;
+    margin: 1em 0;
 }
 
 /* ==== NOTICIAS ==== */
@@ -451,7 +484,7 @@ body::-webkit-scrollbar-thumb{
 
 .producto-pricing > *{
     margin: 0;
-    padding: .3em 0;
+    padding: .3em;
 }
 
 .oferta-especial{
@@ -491,6 +524,7 @@ body::-webkit-scrollbar-thumb{
 
 .oferta-especial h2{
     font-weight: normal;
+    padding: .2em;
 }
 
 .precio{
@@ -631,7 +665,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 .estudiante_row{
-    margin: 0 0 2em;
+    margin: 0 .5em 2em;
 }
 
 .estudiante_row p{
@@ -673,7 +707,6 @@ body::-webkit-scrollbar-thumb{
 
 .wrappper img{
   width: 150px;
-  height: 150px;
   float: left;
   border-radius: 20px;
   margin-right: 20px;
@@ -695,13 +728,32 @@ body::-webkit-scrollbar-thumb{
 }
 
 .wrappper ul li{
-  display: inline;
-  font-size: 1.3em;
+    display: inline;
+    font-size: 1.3em;
 }
 
 .puntuacion_1 li:nth-child(-n+5),
-.puntuacion_2 li:nth-child(-n+4){
+.puntuacion_2 li:nth-child(-n+5),
+.puntuacion_3 li:nth-child(-n+5),
+.puntuacion_4 li:nth-child(-n+5){
   color: orange;
+}
+
+/* ==== IMAGENES ESTUDIANTES ==== */
+.section_imagenes_estudiantes{
+    margin: 5em auto;
+}
+
+.imagen_estudiante{
+    display: grid;
+    place-items: center;
+
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    grid-gap: 1em;
+}
+
+.imagen_estudiante img{
+
 }
 
 /* ==== GARANTIA ==== */
@@ -729,7 +781,6 @@ body::-webkit-scrollbar-thumb{
 
 .garantia-container img{
     width: 150px;
-    height: 150px;
 }
 
 /* ==== PRODUCTO2 ==== */
@@ -769,6 +820,8 @@ body::-webkit-scrollbar-thumb{
 
 .pregunta{
     max-width: 600px;
+    min-width: 600px;
+
     border: 3px solid transparent;
     border-image: linear-gradient(45deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
     border-image-slice: 1;
@@ -807,7 +860,7 @@ body::-webkit-scrollbar-thumb{
 
     border-radius: 0.3rem;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-weight: 0;
 }
 

@@ -58,17 +58,38 @@
         font-size: 1rem;
     }
 
+    /* CARDS */
+    .card {
+        --ancho: 300px;
+    }
+    .card-title{
+        font-size: 1rem;
+    }
+
     /* CARTA */
     .carta{
         grid-template-columns: 1fr;
     }
+    .carta-text span{
+        font-size: 1rem;
+    }
 
-    .lista{
-        padding: 0;
+    .carta-text p{
+        font-size: 1em;
+    }
+
+    .imagen-carta-flex{
+        width: 300px;
+        height: 300px;
     }
 
     .lista ul h1{
         margin: 1em -1em;
+        font-size: 1.5rem;
+    }
+
+    .lista ul li{
+        font-size: 1.1em;
     }
 
     /* NOTICIAS */
@@ -88,18 +109,18 @@
     }
 
     .producto-title {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .oferta-lista{
         font-size: 1rem;
+        padding: 0 1em 0 0;
     }
 
     .bonus-unit{
         display: flex;
         flex-direction: column;
         margin: 1em 0;
-        padding: 1em .5em;
         justify-content: center;
     }
 
@@ -155,7 +176,7 @@
     /* GARANTIA */
     .garantia-container{
         font-size: 1rem;
-        padding: 1em 0;
+        padding: 1em 1em;
     }
 
     .garantia-container {
@@ -180,7 +201,7 @@
         max-width: 100%;
         height: auto;
 
-        font-size: 1rem;
+        font-size: 1em;
     }
 
     .pregunta::before,
@@ -236,6 +257,10 @@
         padding: 0.1em;
         font-size: .7rem;
         text-align: center;
+    }
+    /* IMAGENES UDIANTES */
+    .imagen_estudiante img{
+        width: 350px;
     }
 
     /* GRID */
