@@ -1,28 +1,3 @@
-
-/* ==== SCROLL TOP ==== */
-.scroll_top{
-    position: fixed;
-    right: 10px;
-    bottom: 0;
-    width: 50px;
-    height: 50px;
-
-    border-radius: 50%;
-
-    background: var(--fucshia);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    color: var(--w);
-    border: none;
-    outline: none;
-    cursor: pointer;
-    z-index: 20;
-    margin: 10px;
-}
-
-.scroll_top:active{
-    background-color: #b10450;
-}
-
 /* ==== BARRA ==== */
 header .nav-container{
     display: grid;

@@ -58,7 +58,16 @@
         font-size: 1rem;
     }
 
+    .section-title{
+        background: linear-gradient(0deg, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0) 42%);
+    }
+
+
     /* CARDS */
+    .section-cards{
+        background: rgba(0, 0, 0, 0.40);
+    }
+
     .card {
         --ancho: 300px;
     }
@@ -191,7 +200,11 @@
 
     .QA_container{
         font-size: 1rem;
-        grid-gap: 8em;
+        grid-gap: 10em;
+    }
+
+    .pregunta{
+        width: 90%;
     }
 
     .pregunta::before{
@@ -210,7 +223,7 @@
         z-index: 3;
         top: 50%;
         left: 50%;
-        transform: translateX(-50%) translateY(50%) scale(1);
+        transform: translateX(-50%) translateY(30%) scale(1);
         transition: 120ms transform;
         transform-origin: center;
     }

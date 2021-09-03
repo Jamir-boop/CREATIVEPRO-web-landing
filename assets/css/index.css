@@ -21,6 +21,35 @@ body::-webkit-scrollbar-thumb{
     background: var(--blue);
 }
 
+
+/* ==== SCROLL TOP ==== */
+.scrolltop_style{
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    background: var(--fucshia);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: var(--w);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 20;
+    margin: 10px;
+}
+
+.scrolltop_style:active{
+    background-color: #b10450;
+}
+
+.scroll_comprar{
+    background: var(--blue) !important;
+}
+
 /* ==== LOADER ==== */
 
 .load_container{
@@ -176,6 +205,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 .card-desc {
+    height: 100px;
     padding: 20px;
     margin-bottom: 10px;
 
@@ -819,8 +849,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 .pregunta{
-    max-width: 600px;
-    min-width: 600px;
+    width: 600px;
 
     border: 3px solid transparent;
     border-image: linear-gradient(45deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
