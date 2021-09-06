@@ -171,7 +171,8 @@ body::-webkit-scrollbar-thumb{
     color: var(--void);
 }
 
-.card-image {
+.card-image,
+.card_image_logos{
   position: relative;
   height: 230px;
   margin-bottom: 35px;
@@ -180,13 +181,24 @@ body::-webkit-scrollbar-thumb{
   background: var(--w);
 }
 
-.card-image img {
-    width: 200px;
-    position: absolute;
-    top: 10px;
-    left: calc(var(--ancho)/5);
+.card_image_camara img{
+    width: 100%;
+}
 
-    filter: invert(100%);
+.card-image img {
+    width: 300px;
+    position: absolute;
+    top: -50px;
+    left: 25px;
+}
+
+.card_image_logos img{
+    width: 400px;
+    position: absolute;
+    top: 0;
+    left: -25px;
+
+    filter: none;
 }
 
 .sobre-titulo {
@@ -490,7 +502,10 @@ body::-webkit-scrollbar-thumb{
     margin: 1.2em 0;
     padding: 2em 2em;
 
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(15, 32, 39, 0.5);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(44, 83, 100, 0.5), rgba(32, 58, 67, 0.5), rgba(15, 32, 39, 0.5));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(44, 83, 100, 0.5), rgba(32, 58, 67, 0.5), rgba(15, 32, 39, 0.5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     backdrop-filter: blur(10px);
 
     box-shadow: var(--shadow);
