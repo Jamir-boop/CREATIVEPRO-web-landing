@@ -432,9 +432,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* ==== PRODUCTO ==== */
-.section-producto {
-}
-
 .producto-main {
 	background: var(--w);
 	color: var(--void);
@@ -821,9 +818,6 @@ body::-webkit-scrollbar-thumb {
 
 	grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
 	grid-gap: 1em;
-}
-
-.imagen_estudiante img {
 }
 
 /* ==== GARANTIA ==== */
