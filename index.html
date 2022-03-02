@@ -1,276 +1,291 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <link rel="shortcut icon" href="assets/image/ico.ico">
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>𝘾𝙧𝙚𝙖𝙩𝙞𝙫𝙚 𝙋𝙧𝙤</title>
+<head>
+    <link rel="shortcut icon" href="assets/image/ico.ico">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,200;0,400;1,200;1,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/root.css">
-        <link rel="stylesheet" href="assets/css/barra_navegacion.css">
-        <link rel="stylesheet" href="assets/css/index.css">
-        <link rel="stylesheet" href="assets/css/portfolio.css">
-        <link rel="stylesheet" href="assets/css/responsive.css">
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>𝘾𝙧𝙚𝙖𝙩𝙞𝙫𝙚 𝙋𝙧𝙤</title>
 
-    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,200;0,400;1,200;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/root.css">
+    <link rel="stylesheet" href="assets/css/barra_navegacion.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/portfolio.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
 <body>
 
-<!--===================== SCROLL TOP =====================-->
-<button class="scroll_top scrolltop_style" style="visibility: hidden;">
-    <span class="material-icons-outlined">
-        arrow_upward
-    </span>
-</button>
+    <!--===================== SCROLL TOP =====================-->
+    <button class="scroll_top scrolltop_style" style="visibility: hidden;">
+        <span class="material-icons-outlined">
+            arrow_upward
+        </span>
+    </button>
 
-<button class="scroll_comprar scrolltop_style" style="visibility: hidden;">
-    <span class="material-icons-outlined">
-        arrow_upward
-    </span>
-</button>
+    <button class="scroll_comprar scrolltop_style" style="visibility: hidden;">
+        <span class="material-icons-outlined">
+            arrow_upward
+        </span>
+    </button>
 
-<script>
-    const btn_scroll = document.querySelector('.scroll_top');
-    btn_scroll.addEventListener('click', function (){
-        window.scrollTo({
-            top:0,
-            left:0,
-            behavior: 'smooth'
+    <script>
+        const btn_scroll = document.querySelector('.scroll_top');
+        btn_scroll.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
         });
-    });
 
-    const btn_comprar = document.querySelector('.scroll_comprar');
-    btn_comprar.addEventListener('click', function (){
-        const ahora = document.querySelector("#seccion3");
-        ahora.scrollIntoView({behavior:"smooth", block:"start"});
-    });
+        const btn_comprar = document.querySelector('.scroll_comprar');
+        btn_comprar.addEventListener('click', function () {
+            const ahora = document.querySelector("#seccion3");
+            ahora.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
 
-</script>
+    </script>
 
-<!--===================== BARRA DE NAVEGACION =====================-->
-<header class="header">
-    <nav class="nav-container">
-        <div class="nav-item nav-logo">
-            <a href="index.html" class="btn-logo">
-                <span style="">
-                     Creative<i style="color: var(--fucshia);"> Pro </i>
-                </span>
-            </a>
-        </div>
-
-        <div class="nav-item nav-btn">
-            <button class="scrollto" data-link="seccion1" >Conocenos</button>
-            <button class="scrollto" data-link="seccion2" >Master Class</button>
-            <button class="scrollto" data-link="seccion3" >Precios</button>
-            <button class="scrollto" data-link="seccion4" >Preguntas Frecuentes</button>
-            <form action="portfolio.html">
-                <button type="submit" >Portfolio</button>
-            </form>
-        </div>
-
-        <div class="nav-menu">
-            <a href="#" style="color: var(--w);" onclick="overlay_menu_toggle()">
-                <span class="material-icons-outlined" style="font-size: 2rem;">
-                menu
-                </span>
-            </a>
-        </div>
-    </nav>
-
-    <div id="overlay_menu">
-        <ul>
-            <li style="text-align: right;">
-                <button onclick="overlay_menu_toggle()">
-                    <span class="material-icons-outlined">
-                        close
+    <!--===================== BARRA DE NAVEGACION =====================-->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-item nav-logo">
+                <a href="index.html" class="btn-logo">
+                    <span style="">
+                        Creative<i style="color: var(--fucshia);"> Pro </i>
                     </span>
-                </button>
-            </li>
-            <li>
-                <button class="scrollto" data-link="seccion1" >Conocenos</button>
-            </li>
-            <li>
-                <button class="scrollto" data-link="seccion2" >Master Class</button>
-            </li>
-            <li>
-                <button class="scrollto" data-link="seccion3" >Precios</button>
-            </li>
-            <li>
-                <button class="scrollto" data-link="seccion4" >Preguntas Frecuentes</button>
-            </li>
-            <li>
+                </a>
+            </div>
+
+            <div class="nav-item nav-btn">
+                <button class="scrollto" data-link="seccion1">Conocenos</button>
+                <button class="scrollto" data-link="seccion2">Master Class</button>
+                <button class="scrollto" data-link="seccion3">Precios</button>
+                <button class="scrollto" data-link="seccion4">Preguntas Frecuentes</button>
                 <form action="portfolio.html">
-                    <button type="submit" >Portfolio</button>
+                    <button type="submit">Portfolio</button>
                 </form>
-            </li>
-        </ul>
-    </div>
-    <script defer src="assets/js/overlay_menu.js"></script>
-
-</header>
-<script defer src="assets/js/barra_navegacion.js"></script>
-<script defer src="assets/js/nav_onload.js"></script>
-
-<div class="bg_general">
-    <div class="bg"></div>
-</div>
-
-<!--===================== VIDEO TITLE =====================-->
-<section data-aos="fade-up" class="section-title section">
-    <div class="container-title">
-
-        <div class="main-title">
-            <i>
-                Como <span class="span-red">tomar y retocar</span> fotografias de retrato a nivel <span class="span-red">profesional</span> con los equipos que <span class="span-red">ya tienes</span> sin tener que <span class="span-red">perder el tiempo</span> viendo tutoriales y workshops que hablan de lo mismo.
-            </i>
-        </div>
-
-        <div class="video-title">
-            <iframe src="https://www.youtube.com/embed/bfuPJ7qGe1Y?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
-        </div>
-
-        <div class="sec-title">
-            <span>¿Qué vas a conseguir con este nuevo curso?</span>
-        </div>
-
-    </div>
-</section>
-
-<!--===================== CARDS =====================-->
-<section class="section-cards section ">
-    <div class="wrapper">
-        <div class="card">
-            <div class="card_image_camara">
-                <img src="assets/image/camera.png" alt="card imagen"/>
             </div>
 
-            <div class="sobre-titulo">Lograrás</div>
-
-            <div class="card-title">
-                Hacer fotografías profesionales con equipos de bajo costo.
+            <div class="nav-menu">
+                <a href="#" style="color: var(--w);" onclick="overlay_menu_toggle()">
+                    <span class="material-icons-outlined" style="font-size: 2rem;">
+                        menu
+                    </span>
+                </a>
             </div>
+        </nav>
 
-            <div class="card-desc">
-                Obtendrás el criterio y conocimiento necesario para sacarle partido a tu camara y conseguir el mejor resultado en tus fotografías sin importar el equipo que tengas.
-            </div>
-
-            <div class="card-footer clearfix">
-              <br>
-            </div>
+        <div id="overlay_menu">
+            <ul>
+                <li style="text-align: right;">
+                    <button onclick="overlay_menu_toggle()">
+                        <span class="material-icons-outlined">
+                            close
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <button class="scrollto" data-link="seccion1">Conocenos</button>
+                </li>
+                <li>
+                    <button class="scrollto" data-link="seccion2">Master Class</button>
+                </li>
+                <li>
+                    <button class="scrollto" data-link="seccion3">Precios</button>
+                </li>
+                <li>
+                    <button class="scrollto" data-link="seccion4">Preguntas Frecuentes</button>
+                </li>
+                <li>
+                    <form action="portfolio.html">
+                        <button type="submit">Portfolio</button>
+                    </form>
+                </li>
+            </ul>
         </div>
+        <script defer src="assets/js/overlay_menu.js"></script>
+
+    </header>
+    <script defer src="assets/js/barra_navegacion.js"></script>
+    <script defer src="assets/js/nav_onload.js"></script>
+
+    <div class="bg_general">
+        <div class="bg"></div>
     </div>
 
-    <div class="wrapper">
-        <div class="card">
-            <div class="card_image_logos">
-                <img src="assets/image/logos.png" alt="card imagen"/>
+    <!--===================== VIDEO TITLE =====================-->
+    <section data-aos="fade-up" class="section-title section">
+        <div class="container-title">
+
+            <div class="main-title">
+                <i>
+                    Como hacer fotografías de retrato a <span style="text-decoration: underline;">nivel
+                        profesional</span><br>
+                    <span class="span-red"> con los equipos que <span style="text-decoration: underline;">ya
+                            tienes.</span></span>
+                </i>
             </div>
 
-            <div class="sobre-titulo">Lograrás</div>
-
-            <div class="card-title">
-                Dominarás al 100% el manejo de los programas.
+            <div class="video-title">
+                <iframe src="https://www.youtube.com/embed/bfuPJ7qGe1Y?autoplay=1&mute=1" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
 
-            <div class="card-desc">
-                Conocerás los principales conceptos sobre el uso de los programas y la correcta configuracion de tu espacio de trabajo para acelerar tu proceso creativo al momento de retocar.
+            <div class="sec-title">
+                <span>¿Qué vas a conseguir con este nuevo curso?</span>
             </div>
 
-            <div class="card-footer clearfix">
-              <br>
-            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="wrapper">
-        <div class="card">
-            <div class="card-image">
-                <img src="assets/image/herramientas.png" alt="card imagen"/>
+    <!--===================== CARDS =====================-->
+    <section class="section-cards section ">
+        <div class="wrapper">
+            <div class="card">
+                <div class="card_image_camara">
+                    <img src="assets/image/camera.png" alt="card imagen" />
+                </div>
 
-            </div>
+                <div class="sobre-titulo">Lograrás</div>
 
-            <div class="sobre-titulo">Lograrás</div>
+                <div class="card-title">
+                    Hacer fotografías profesionales con equipos de bajo costo.
+                </div>
 
-            <div class="card-title">
-                Crearás herramientas especializadas usando técnicas profesionales.
-            </div>
+                <div class="card-desc">
+                    Obtendrás el criterio y conocimiento necesario para sacarle partido a tu camara y conseguir el mejor
+                    resultado en tus fotografías sin importar el equipo que tengas.
+                </div>
 
-            <div class="card-desc">
-                Te mostraré como crear y aplicar las herramientas más avanzadas sobre edición y retoque para hacer que tu trabajo evolucione de amateur a pro.
-            </div>
-
-            <div class="card-footer clearfix">
-              <br>
-            </div>
-        </div>
-    </div>
-
-</section>
-
-<!--===================== SHOWCASE MAIN BUTTON =====================-->
-<section data-aos="fade-right" class="section-showcase section">
-    <div class="showcase-container">
-
-        <div class="showcase-container-listnimg">
-            <div class="showcase-list">
-                <h1 class="showcase-title" >
-                    Este curso es para ti solo si:
-                </h1>
-                <ul>
-                    <li>
-                        Deseas aprender a sacar el máximo provecho de la cámara <b>que tienes actualmente.</b>
-                    </li><br>
-                    <li>
-                        Estas estancado y sientes que tus fotos siguen viéndose igual.
-                    </li><br>
-                    <li>
-                        Necesitas tener mejores fotos para poder <b>destacar en la industria</b> y ser reconocido como un referente.
-                    </li><br>
-                    <li>
-                        Quieres pasar al <b>siguiente nivel</b> y no sabes como.
-                    </li><br>
-                    <li>
-                        Aunque pases dias viendo tutoriales sientes que tus fotos no llegan a verse como las de los fotografos que admiras.
-                    </li><br>
-                    <li>
-                        Las técnicas que usas actualmente para retocar no dejan resultados profesionales en tus fotografias.
-                    </li><br>
-                </ul>
-            </div>
-            <div class="showcase-img">
-                <img src="assets/image/demo_bg7.jpeg" alt="showcase">
+                <div class="card-footer clearfix">
+                    <br>
+                </div>
             </div>
         </div>
 
-        <div class="sell-btn-inscribirse">
-            <button class="scrollto main-sell" data-link="seccion3">
-                Inscribirme ahora
-            </button>
+        <div class="wrapper">
+            <div class="card">
+                <div class="card_image_logos">
+                    <img src="assets/image/logos.png" alt="card imagen" />
+                </div>
+
+                <div class="sobre-titulo">Lograrás</div>
+
+                <div class="card-title">
+                    Dominarás al 100% el manejo de los programas.
+                </div>
+
+                <div class="card-desc">
+                    Conocerás los principales conceptos sobre el uso de los programas y la correcta configuracion de tu
+                    espacio de trabajo para acelerar tu proceso creativo al momento de retocar.
+                </div>
+
+                <div class="card-footer clearfix">
+                    <br>
+                </div>
+            </div>
         </div>
 
-        <div class="sell-limitado">
-            <h2>- Espacios limitados -</h2>
+        <div class="wrapper">
+            <div class="card">
+                <div class="card_image">
+                    <img src="assets/image/herramientas.png" alt="card imagen" />
+
+                </div>
+
+                <div class="sobre-titulo">Lograrás</div>
+
+                <div class="card-title">
+                    Crearás herramientas especializadas usando técnicas profesionales.
+                </div>
+
+                <div class="card-desc">
+                    Te mostraré como crear y aplicar las herramientas más avanzadas sobre edición y retoque para hacer
+                    que tu trabajo evolucione de amateur a pro.
+                </div>
+
+                <div class="card-footer clearfix">
+                    <br>
+                </div>
+            </div>
         </div>
 
-    </div>
-</section>
+    </section>
 
-<!--===================== CARTA =====================-->
-<section class="section-carta section" id="seccion1">
+    <!--===================== SHOWCASE MAIN BUTTON =====================-->
+    <section data-aos="fade-right" class="section-showcase section">
+        <div class="showcase-container">
 
-    <div class="carta-center">
-        <div class="carta-container">
+            <div class="showcase-container-listnimg">
+                <div class="showcase-list">
+                    <h1 class="showcase-title">
+                        Este curso es para ti solo si:
+                    </h1>
+                    <ul>
+                        <li>
+                            Deseas aprender a sacar el máximo provecho de la cámara <b>que tienes actualmente.</b>
+                        </li><br>
+                        <li>
+                            Estas estancado y sientes que tus fotos siguen viéndose igual.
+                        </li><br>
+                        <li>
+                            Necesitas tener mejores fotos para poder <b>destacar en la industria</b> y ser reconocido
+                            como un referente.
+                        </li><br>
+                        <li>
+                            Quieres pasar al <b>siguiente nivel</b> y no sabes como.
+                        </li><br>
+                        <li>
+                            Aunque pases dias viendo tutoriales sientes que tus fotos no llegan a verse como las de los
+                            fotografos que admiras.
+                        </li><br>
+                        <li>
+                            Las técnicas que usas actualmente para retocar no dejan resultados profesionales en tus
+                            fotografias.
+                        </li><br>
+                    </ul>
+                </div>
+                <div class="showcase-img">
+                    <img src="assets/image/demo_bg7.jpeg" alt="showcase">
+                </div>
+            </div>
+
+            <div class="sell-btn-inscribirse">
+                <button class="scrollto main-sell" data-link="seccion3">
+                    Inscribirme ahora
+                </button>
+            </div>
+
+            <div class="sell-limitado">
+                <h2>- Espacios limitados -</h2>
+            </div>
+
+        </div>
+    </section>
+
+    <!--===================== CARTA =====================-->
+    <section class="section-carta section" id="seccion1">
+
+        <div class="carta-center">
+            <div class="carta-container">
 
                 <div class="carta">
                     <div class="imagen-carta carta1">
                         <div class="imagen-carta-flex">
-                        <img src="assets/image/sebastian.jpg" alt="img carta">
+                            <img src="assets/image/sebastian.jpg" alt="img carta">
                         </div>
                     </div>
 
@@ -279,7 +294,13 @@
                         <br><br>
                         <span><b>PARA:</b> Principiante con poca experiencia pero grandes metas</span>
                         <p>
-                            Este es un mensaje muy personal para ti.  si alguna vez te preguntaste como tener un trabajo profesional que genere un impacto para lograr colaboraciones y que las marcas se fijen en ti, si alguna vez intentaste editar tus fotos en base a lo que aprendiste en workshops y tutoriales pero el resultado de tus fotos no eran los que esperabas, si alguna vez invertiste horas en internet buscando informacion sobre como hacer y retocar fotos pero no encontrabas lo que bucabas, aspiras a convertirte en un referente y lograr construir una comunidad que apueste por tu trabajo, lee muy cuidadosamente la siguiente pagina...
+                            Este es un mensaje muy personal para ti. si alguna vez te preguntaste como tener un trabajo
+                            profesional que genere un impacto para lograr colaboraciones y que las marcas se fijen en
+                            ti, si alguna vez intentaste editar tus fotos en base a lo que aprendiste en workshops y
+                            tutoriales pero el resultado de tus fotos no eran los que esperabas, si alguna vez
+                            invertiste horas en internet buscando informacion sobre como hacer y retocar fotos pero no
+                            encontrabas lo que bucabas, aspiras a convertirte en un referente y lograr construir una
+                            comunidad que apueste por tu trabajo, lee muy cuidadosamente la siguiente pagina...
                         </p>
                         <i>-Sebastian Bronley-</i>
                     </div>
@@ -290,437 +311,473 @@
                         <h1>La informacion que verás a continuación me ha llevado a lograr:</h1>
                         <li>Educar a mas de 300 fotografos a nivel internacional</li>
                         <li>Construir una comunidad de mas de 30mil audiovisuales en instagram.</li>
-                        <li>Trabajar como fotografo para marcas internacionales como Adidas, Saint Laurent, Pandora, LG, Mac, Pixel Global, etc.</li>
-                        <li>Crear contenido para los influencers, figuras publicas y marcas personales mas grandes de mi país.</li>
+                        <li>Trabajar como fotografo para marcas internacionales como Adidas, Saint Laurent, Pandora, LG,
+                            Mac, Pixel Global, etc.</li>
+                        <li>Crear contenido para los influencers, figuras publicas y marcas personales mas grandes de mi
+                            país.</li>
                         <li>Ser el fotografo retratista/retocador mas conocido de instgram en mi país.</li>
                     </ul>
                 </div>
-        </div>
-    </div>
-
-</section>
-
-<!--===================== NOTICIAS  =====================-->
-<section data-aos="fade-up" class="section-noticias section">
-
-    <div class="title-noticias">
-        <h1>Todo lo que está sucediendo en esta industria..</h1>
-    </div>
-
-    <div class="noticias">
-        <div class="noticia-bloque">
-            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, provident!</h3>
-            <img src="assets/image/demo.jpg" alt="noticia">
-        </div>
-        <div class="noticia-bloque">
-            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dicta eius ullam.</h3>
-            <img src="assets/image/demo.jpg" alt="noticia">
-        </div>
-    </div>
-
-</section>
-
-<!--===================== PRODUCTO  =====================-->
-<section class="section-producto section" id="seccion2">
-
-    <div data-aos="fade-up" class="producto-main">
-        <div class="producto-title">
-            <h2>Pasa de 0 a 100 como Fotógrafo.</h2>
-            <h1>!El CURSO DE RETRATO MÁS COMPLETO!</h1>
-            <img src="assets/image/Grupo.png" alt="producto">
+            </div>
         </div>
 
-        <div class="modulos-producto">
-            <ul>
-                <h2><span>MODULO 1 </span>Producción</h2>
-                <li>Configuracion General de la Cámara</li>
-                <li>Balance de Blancos</li>
-                <li>Triangulo de la Exposicion</li>
-                <li>Apertura</li>
-                <li>Velocidad de Obturacion</li>
-                <li>ISO</li>
-                <li>Configuracion de los Parametros de Exposición en la Cámara</li>
-                <li>Medicion de Luz</li>
-            </ul>
-            <ul>
-                <h2><span>MODULO 2 </span>Edición</h2>
-                <li>Importacion de los Archivos</li>
-                <li>Seleccion y Organizacion</li>
-                <li>El Raw y el Histograma</li>
-                <li>Revelado</li>
-                <li>Curvas de Tono</li>
-                <li>Tono Saturacion y Luminancia</li>
-                <li>Correccion de color y Colorizacién</li>
-                <li>Exportacion a Photoshop</li>
-            </ul>
-            <ul>
-                <h2><span>MODULO 3 </span>Retoque</h2>
-                <li>Configuracion del Espacio de Trabajo</li>
-                <li>Creación e Instalación de las Acciones</li>
-                <li>Configuración y Organización de las Herramientas</li>
-                <li>Limpieza General de la Imagen</li>
-                <li>Separacion de Frecuencias</li>
-                <li>Dodge & Burn (Micro, Local, Global)</li>
-                <li>Colorgrading</li>
-                <li>Exportacion</li>
-                <li>Conclusiones</li>
-            </ul>
-        </div>
-    </div>
+    </section>
 
-    <div data-aos="fade-up" class="producto-bonus">
-        <div class="bonus-title producto-title">
-            <h2>¡PERO ESO NO ES TODO! También Vas a Obtener...</h2>
-            <h1>!4 BONUS ADICIONALES GRATIS!</h1>
+    <!--===================== NOTICIAS  =====================-->
+    <section data-aos="fade-up" class="section-noticias section">
+
+        <div class="title-noticias">
+            <h1>Todo lo que está sucediendo en esta industria..</h1>
         </div>
 
-        <div class="unit-container">
+        <div class="noticias">
+            <div class="noticia-bloque">
+                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, provident!</h3>
+                <img src="assets/image/demo.jpg" alt="noticia">
+            </div>
+            <div class="noticia-bloque">
+                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dicta eius ullam.</h3>
+                <img src="assets/image/demo.jpg" alt="noticia">
+            </div>
+        </div>
 
-            <div class="bonus-unit">
-                <img src="assets/image/Bonus Preset.png" alt="imagen producto">
-                <div class="bonus-text">
-                    <h1>Bonus 1: Vibrant Preset Pack </h1>
-                    <p>Un pack de 10 de los mejores presets creados por mí a lo largo de mis 4 años de experiencia para que logres transformar tus fotografías con un sencillo paso.</p>
+    </section>
+
+    <!--===================== PRODUCTO  =====================-->
+    <section class="section-producto section" id="seccion2">
+
+        <div data-aos="fade-up" class="producto-main">
+            <div class="producto-title">
+                <h2>Pasa de 0 a 100 como Fotógrafo.</h2>
+                <h1>!El CURSO DE RETRATO MÁS COMPLETO!</h1>
+                <img src="assets/image/Grupo.png" alt="producto">
+            </div>
+
+            <div class="modulos-producto">
+                <ul>
+                    <h2><span>MODULO 1 </span>Producción</h2>
+                    <li>Configuracion General de la Cámara</li>
+                    <li>Balance de Blancos</li>
+                    <li>Triangulo de la Exposicion</li>
+                    <li>Apertura</li>
+                    <li>Velocidad de Obturacion</li>
+                    <li>ISO</li>
+                    <li>Configuracion de los Parametros de Exposición en la Cámara</li>
+                    <li>Medicion de Luz</li>
+                </ul>
+                <ul>
+                    <h2><span>MODULO 2 </span>Edición</h2>
+                    <li>Importacion de los Archivos</li>
+                    <li>Seleccion y Organizacion</li>
+                    <li>El Raw y el Histograma</li>
+                    <li>Revelado</li>
+                    <li>Curvas de Tono</li>
+                    <li>Tono Saturacion y Luminancia</li>
+                    <li>Correccion de color y Colorizacién</li>
+                    <li>Exportacion a Photoshop</li>
+                </ul>
+                <ul>
+                    <h2><span>MODULO 3 </span>Retoque</h2>
+                    <li>Configuracion del Espacio de Trabajo</li>
+                    <li>Creación e Instalación de las Acciones</li>
+                    <li>Configuración y Organización de las Herramientas</li>
+                    <li>Limpieza General de la Imagen</li>
+                    <li>Separacion de Frecuencias</li>
+                    <li>Dodge & Burn (Micro, Local, Global)</li>
+                    <li>Colorgrading</li>
+                    <li>Exportacion</li>
+                    <li>Conclusiones</li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-aos="fade-up" class="producto-bonus">
+            <div class="bonus-title producto-title">
+                <h2>¡PERO ESO NO ES TODO! También Vas a Obtener...</h2>
+                <h1>!4 BONUS ADICIONALES GRATIS!</h1>
+            </div>
+
+            <div class="unit-container">
+
+                <div class="bonus-unit">
+                    <img src="assets/image/Bonus Preset.png" alt="imagen producto">
+                    <div class="bonus-text">
+                        <h1>Bonus 1: Vibrant Preset Pack </h1>
+                        <p>Un pack de 10 de los mejores presets creados por mí a lo largo de mis 4 años de experiencia
+                            para que logres transformar tus fotografías con un sencillo paso.</p>
+                    </div>
+                </div>
+
+                <div class="bonus-unit">
+                    <img src="assets/image/Bonus.png" alt="" class="not-show">
+                    <div class="bonus-text">
+                        <h1>Bonus 2: Acciones de Photoshop </h1>
+                        <p>Acciones pre creadas de todas mas herramientas para que logres aplicar las técnicas vistas en
+                            clase con un solo click!!</p>
+                    </div>
+                    <img src="assets/image/Bonus.png" alt="" class="yes-show">
+                </div>
+
+                <div class="bonus-unit">
+                    <img src="assets/image/Bonus.png" alt="">
+                    <div class="bonus-text">
+                        <h1>Bonus 3: RAWs + PSD </h1>
+                        <p>Imágenes en Raw tomadas por mi para qué puedas practicar lo aprendido y el archivo proyecto
+                            PSD del curso para que puedas seguirlo paso a paso.</p>
+                    </div>
+                </div>
+
+                <div class="bonus-unit">
+                    <img src="assets/image/Bonus.png" alt="" class="not-show">
+                    <div class="bonus-text">
+                        <h1>Bonus 4: Comunidad Privada </h1>
+                        <p>Tendrás acceso a un canal de Telegram donde estarán únicamente personas que son parte de
+                            Creative Pro, en esta comunidad podrás participar de en vivos, contenido privado, podré
+                            resolver todas tus dudas personalmente y a demás podrás conectar con más audiovisuales como
+                            tu.</p>
+                    </div>
+                    <img src="assets/image/Bonus.png" alt="" class="yes-show">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="producto-pricing" id="seccion3">
+            <h1>TODO ESTO NORMALMENTE TIENE UN VALOR DE:</h1>
+            <h2 style="text-decoration: line-through;">⚠️ 577 DOLARES ⚠️</h2>
+        </div>
+
+        <div class="oferta-especial" data-aos="fade-left">
+            <h2>Sin embargo quiero verte <b>triufar</b> en esta <b>industria</b> por eso...</h2>
+            <h1>TE DARÉ UNA OFERTA ESPECIAL DE TODO LO QUE NECESITARÁS AHORA:</h1>
+
+            <img width="500px" src="assets/image/Grupo.png" alt="producto">
+            <div class="oferta-lista">
+                <ul>
+                    <h1>Entiendo que:</h1>
+                    <li>Tendré acceso al curso PARA TODA LA VIDA para poder verlo cuando quiera y desde donde quiera a
+                        mi propio ritmo. (399USD)</li><br>
+                    <li>Tendré acceso a TODAS las FUTURAS ACTUALIZACIONES de Creative Pro por siempre.(90USD).</li><br>
+                    <li>Bono #1: Podré descargar TODOS los presets de Vibrant Preset Pack. (27USD).</li><br>
+                    <li>Bono #2: Tendré acceso a Acciones de Photoshop PROFESIONALES que facilitan el proceso al momento
+                        de trabajar. (12USD).</li><br>
+                    <li>Bono #3: Podré descargar imágenes RAW ilimitadas para practicar y el PSD proyecto del curso
+                        (50USD)</li><br>
+                    <li>Bono #4: Tendré acceso a la COMUNIDAD PRIVADA de Telegram donde podré resolver todas mis dudas
+                        personalmente con Sebastián Bronley.</li><br>
+                </ul>
+            </div>
+
+            <h1>TODO ESTO TIENE UN VALOR DE <span>$577</span></h1>
+            <h2>solo por <b><i>24 horas</i></b> obtén <b><i>acceso total</i></b> a CreativePro© por</h2>
+            <span class="precio">65$ USD</span>
+
+            <div class="main-btn-container">
+                <a href="https://payment.hotmart.com/O57415854V?checkoutMode=10" class="main-btn">SÍ, QUIERO SER
+                    PARTE!</a>
+            </div>
+
+            <p><b><i> Ultimos espacios disponinbles </i></b></p>
+            <div class="line">
+                <span></span>
+            </div>
+
+        </div>
+    </section>
+
+    <!--===================== GRID  =====================-->
+    <section data-aos="fade-up" class="section-grid section">
+
+        <h1>Imagina todo lo que podrás lograr siendo un fotógrafo retratista profesional.</h1>
+
+        <div class="grid-container">
+            <div data-aos="fade-left">
+                <p class="grid_text">Lorem ipsum dolor sit.</p>
+            </div>
+            <div data-aos="fade-right">
+                <img src="assets/image/grid_11.jpg" alt="grid image">
+            </div>
+            <div data-aos="fade-left">
+                <p class="grid_text">Lorem ipsum dolor sit</p>
+            </div>
+            <div data-aos="fade-right">
+                <img src="assets/image/grid_12.jpg" alt="grid image">
+            </div>
+            <div data-aos="fade-left">
+                <p class="grid_text">Lorem ipsum dolor sit</p>
+            </div>
+            <div data-aos="fade-right">
+                <img src="assets/image/grid_1.jpg" alt="grid image">
+            </div>
+            <div data-aos="fade-left">
+                <p class="grid_text">Lorem ipsum dolor sit</p>
+            </div>
+            <div data-aos="fade-right">
+                <img src="assets/image/grid_2.jpg" alt="grid image">
+            </div>
+            <div data-aos="fade-left">
+                <p class="grid_text">Lorem ipsum dolor sit</p>
+            </div>
+            <div data-aos="fade-right">
+                <img src="assets/image/grid_3.jpg" alt="grid image">
+            </div>
+            <div data-aos="fade-left">
+                <p class="grid_text">Lorem ipsum dolor sit</p>
+            </div>
+            <div data-aos="fade-right">
+                <img src="assets/image/grid_4.jpg" alt="grid image">
+            </div>
+            <div data-aos="fade-left">
+                <p class="grid_text">Lorem ipsum dolor sit</p>
+            </div>
+            <div data-aos="fade-right">
+                <img src="assets/image/grid_9.jpg" alt="grid image">
+            </div>
+            <div data-aos="fade-left">
+                <p class="grid_text">Lorem ipsum dolor sit</p>
+            </div>
+            <div data-aos="fade-right">
+                <img src="assets/image/grid_8.jpg" alt="grid image">
+            </div>
+
+        </div>
+    </section>
+
+    <!--===================== ESTUDIANTES =====================-->
+    <section class="section-estudiantes section">
+
+        <div class="estudiantes_title">
+            <h1>Nuestros estudiantes.</h1>
+        </div>
+
+        <div class="estudiantes-container">
+
+            <div class="estudiante_row">
+                <div class="col-md-4">
+                    <p>
+                        Cuando entré no sabía casi nada de retoque de piel, me ayudó a tener un flujo de trabajo con
+                        lightroom y photoshop, ya que antes no era muy ordenada porque veía distintos tutoriales de
+                        internet y solo usaba photoshop. Además, su actitud fue muy entusiasta al dictar las clases lo
+                        cuál hizo que no fueran aburridas.
+                    </p>
+
+                    <div class="wrappper">
+                        <img src="assets/image/belen.jpg" />
+                        <h3>Belén Ramírez</h3>
+                        <small>Estudinte de Fotógrafia</small>
+                        <ul class="puntuacion_1">
+                            <li>★</li>
+                            <li>★</li>
+                            <li>★</li>
+                            <li>★</li>
+                            <li>★</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="bonus-unit">
-                <img src="assets/image/Bonus.png" alt="" class="not-show">
-                <div class="bonus-text">
-                    <h1>Bonus 2: Acciones de Photoshop </h1>
-                    <p>Acciones pre creadas de todas mas herramientas para que logres aplicar las técnicas vistas en clase con un solo click!!</p>
+            <div class="estudiante_row">
+                <div class="col-md-4">
+                    <p>
+                        El curso me pareció increíble, tiene un montón de información útil y lo mejor es que lo hace
+                        súper sencillo como para que un niño lo pueda entender, soy fotografo de viajes y me ayudó
+                        muchísimo a subir la calidad de mis fotos al momento de editar y también pude por fin aprender a
+                        retocar pieles de la manera correcta, estoy encantado con los resultados.
+                    </p>
+
+                    <div class="wrappper">
+                        <img src="assets/image/renato.jpg" />
+                        <h3>Renato Perez</h3>
+                        <small>Creador de Trópico Preset</small>
+                        <ul class="puntuacion_2">
+                            <li>★</li>
+                            <li>★</li>
+                            <li>★</li>
+                            <li>★</li>
+                            <li>★</li>
+                        </ul>
+                    </div>
                 </div>
-                <img src="assets/image/Bonus.png" alt="" class="yes-show">
             </div>
 
-            <div class="bonus-unit">
-                <img src="assets/image/Bonus.png" alt="">
-                <div class="bonus-text">
-                    <h1>Bonus 3: RAWs + PSD </h1>
-                    <p>Imágenes en Raw tomadas por mi para qué puedas practicar lo aprendido y el archivo proyecto PSD del curso para que puedas seguirlo paso a paso.</p>
+            <div class="estudiante_row">
+                <div class="col-md-4">
+                    <p>
+                        El curso cumple, soy Filmaker Profesional y editar fotos se me hacía complicado, pero en
+                        realidad gracias a Sebastián entendí que era todo lo contrario, aprender a editar me tomó menos
+                        tiempo de lo que creí y las acciones y presets facilitarón mucho el flujo de trabajo.
+                    </p>
+
+                    <div class="wrappper">
+                        <img src="assets/image/martin.jpg" />
+                        <h3>Martín Velarde</h3>
+                        <small>Creador de Visual Media Group</small>
+                        <ul class="puntuacion_3">
+                            <li>★</li>
+                            <li>★</li>
+                            <li>★</li>
+                            <li>★</li>
+                            <li>★</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="bonus-unit">
-                <img src="assets/image/Bonus.png" alt="" class="not-show">
-                <div class="bonus-text">
-                    <h1>Bonus 4: Comunidad Privada </h1>
-                    <p>Tendrás acceso a un canal de Telegram donde estarán únicamente personas que son parte de Creative Pro, en esta comunidad podrás participar de en vivos, contenido privado, podré resolver todas tus dudas personalmente y a demás podrás conectar con más audiovisuales como tu.</p>
+            <div class="estudiante_row">
+                <div class="col-md-4">
+                    <p>
+                        Llevar el curso de Retoque fotográfico con Sebastian Bronley fue bastante completo y excelente.
+                        Vimos cómo retocar una fotografía de retrato desde 0, con Lightroom y luego con las herramientas
+                        de Photoshop, y si bien es compleja la edición fue un curso muy ameno en el que aprendes algo
+                        tan amplio de una manera sencilla pero sin que se escape ningún detalle. Definitivamente
+                        recomiendo el curso para todo fotógrafo porque llevo mi edición de un 0 a 100. <b>10/10</b>
+                    </p>
+
+                    <div class="wrappper">
+                        <img src="assets/image/guillermo.jpg" />
+                        <h3>Guillermo Saravia</h3>
+                        <small>Estudiante de Audiovisuales</small>
+                        <ul class="puntuacion_4">
+                            <li>★</li>
+                            <li>★</li>
+                            <li>★</li>
+                            <li>★</li>
+                            <li>★</li>
+                        </ul>
+                    </div>
                 </div>
-                <img src="assets/image/Bonus.png" alt="" class="yes-show">
-                <div></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--===================== IMAGENES ESTUDIANTE  =====================-->
+    <section class="section_imagenes_estudiantes section">
+
+        <div class="imagen_estudiante">
+            <img src="assets/image/daniel.jpg" alt="imagen estudiante">
+            <img src="assets/image/daniel.jpg" alt="imagen estudiante">
+        </div>
+
+    </section>
+
+    <!--===================== GARANTIA  =====================-->
+    <section data-aos="zoom-in" class="section-garantia section">
+
+        <div class="garantia-container">
+            <img src="assets/image/garantia.png" alt="garantia img">
+            <div>
+                <h2>Garantía de 7 Días de Reembolso 100%</h2>
+                <b>No tienes nada que perder</b>
+                <p>
+                    Si luego de adquirir nuestro curso, este no cumple con tus expectativas te reembolsamos el 100% de
+                    tu inversión. Tu reembolso está garantizado por Hotmart la plataforma en la que está alojado nuestro
+                    producto y en la que también realizarás el pago.
+                </p>
             </div>
         </div>
-    </div>
-    <div class="producto-pricing" id="seccion3">
-        <h1>TODO ESTO NORMALMENTE TIENE UN VALOR DE:</h1>
-        <h2 style="text-decoration: line-through;">⚠️ 577 DOLARES ⚠️</h2>
-    </div>
 
-    <div class="oferta-especial" data-aos="fade-left">
-        <h2>Sin embargo quiero verte <b>triufar</b> en esta <b>industria</b> por eso...</h2>
-        <h1>TE DARÉ UNA OFERTA ESPECIAL DE TODO LO QUE NECESITARÁS AHORA:</h1>
+    </section>
 
-        <img width="500px" src="assets/image/product.png" alt="producto">
-        <div class="oferta-lista">
-            <ul>
-                <h1>Entiendo que:</h1>
-                <li>Tendré acceso al curso PARA TODA LA VIDA para poder verlo cuando quiera y desde donde quiera a mi propio ritmo. (399USD)</li><br>
-                <li>Tendré acceso a TODAS las FUTURAS ACTUALIZACIONES de Creative Pro por siempre.(90USD).</li><br>
-                <li>Bono #1: Podré descargar TODOS los presets de Vibrant Preset Pack. (27USD).</li><br>
-                <li>Bono #2: Tendré acceso a Acciones de Photoshop PROFESIONALES que facilitan el proceso al momento de trabajar. (12USD).</li><br>
-                <li>Bono #3: Podré descargar imágenes RAW ilimitadas para practicar y el PSD proyecto del curso (50USD)</li><br>
-                <li>Bono #4: Tendré acceso a la COMUNIDAD PRIVADA de Telegram donde podré resolver todas mis dudas personalmente con Sebastián Bronley.</li><br>
-            </ul>
+    <!--===================== PRODUCTO2  =====================-->
+    <section class="section-producto section" data-aos="zoom-in">
+
+        <div class="oferta-especial" data-aos="fade-up">
+            <h2>AHORA QUE NO TIENES NINGUN TIPO DE RIESGO NI EXCUSAS…</h2>
+            <h1>!Esto es todo lo que obtendrás!</h1>
+
+            <img width="500px" src="assets/image/Grupo.png" alt="producto">
+            <div class="oferta-lista oferta-lista2">
+                <ul>
+                    <h1>SOLO SI ACTIVAS TU CUETA HOY:</h1>
+                    <li>Curso completo de fotografía de retrato de 0 a 100 (ACCESO PARA TODA LA VIDA).</li>
+                    <li>Acceso a TODAS las actualizaciones de CREATIVE PRO.</li>
+                    <li>Bono #1: TODOS los presets de Vibrant Preset Pack.</li>
+                    <li>Bono #2: Acciones de Photoshop PROFESIONALES.</li>
+                    <li>Bono #3: Imágenes RAW ILIMITADAS + PSD proyecto del curso.</li>
+                    <li>Bono #4: Acceso a la COMUNIDAD PRIVADA de Creative Pro.</li>
+                </ul>
+            </div>
+
+            <h1>TODO ESTO TIENE UN VALOR TOTAL DE <span>577 USD</span></h1>
+            <h1>Solo por hoy <span class="precio-green">65 USD</span></h1>
+
+
+            <div class="main-btn-container">
+                <a href="https://payment.hotmart.com/O57415854V?checkoutMode=10" class="main-btn">QUIERO ESTA
+                    OFERTA!</a>
+            </div>
+            <small>click en el botón de arriba para ver precios en tu moneda local.</small>
+
+            <div class="line">
+                <span></span>
+            </div>
+
+        </div>
+    </section>
+
+    <!--===================== Q&A  =====================-->
+    <section class="section_QA section" id="seccion4">
+
+        <h1>Preguntas Frecuentes</h1>
+        <div class="QA_container" data-aos="fade-left">
+
+            <div class="pregunta"
+                data-tooltip="Sí, el curso te ayudará a sacarle el provecho a los equipos con los que ya cuentas al 100% y lograr fotografías profesionales, sin importar el lente o cámara que tengas.">
+                <p>No cuento con una cámara costosa, ¿igual puedo llevar este curso?</p>
+            </div>
+            <div class="pregunta"
+                data-tooltip="Este curso está diseñado para todo tipo de público, seas principiante, estés empezando o ya lleves años en la fotografía, veremos todo desde lo más básico hasta lo más avanzado de manera práctica y ordenada.">
+                <p>¿Necesito tener conocimientos previos?</p>
+            </div>
+            <div class="pregunta"
+                data-tooltip="CreativePro y sus actualizaciones son para siempre y tu acceso a este también, podrás tenerlo para toda la vida y verlo cuantas veces quieras sin ninguna limitación.">
+                <p>¿Tendré acceso por siempre al curso una vez que lo adquiera?</p>
+            </div>
+            <div class="pregunta"
+                data-tooltip="En la plataforma en la que realizarás el pago tienes diversos métodos tales como: Tarjetas de crédito o débito (Sin importar el país en el que te encuentres o el banco al que pertenezcas), PayPal, Pago en Efectivo.">
+                <p>¿Cuáles son los métodos de pago y funcionan en cualquier país?</p>
+            </div>
+            <div class="pregunta"
+                data-tooltip="Mediante nuestra comunidad privada de Telegram podrás realizar todas tus preguntas y estas serán respondidas personalmente por Sebastián Bronley para que no te queden dudas.">
+                <p>Una vez esté dentro de CreativePro ¿tendré soporte si tengo dudas sobre alguna clase?</p>
+            </div>
+            <div class="pregunta"
+                data-tooltip="Luego de los 7 días de compra, si el programa no cumple con tus expectativas o no quedas satisfecho puedes reclamar tu reembolso mediante «refund.hotmart» con tu número de transacción y tu correo.">
+                <p>Garantía de reembolso</p>
+            </div>
+            <div class="pregunta"
+                data-tooltip="Cuando vayas a realizar la compra haciendo click en cualquiera de los botones, serás re direccionado a la plataforma de pago (Hotmart) donde automáticamente el precio se verá reflejado en tu moneda actual según el país en el que te encuentres.">
+                <p>¿Cuál es el precio en mi moneda local?</p>
+            </div>
         </div>
 
-        <h1>TODO ESTO TIENE UN VALOR DE <span>$577</span></h1>
-        <h2>solo por <b><i>24 horas</i></b> obtén <b><i>acceso total</i></b> a CreativePro© por</h2>
-        <span class="precio">65$ USD</span>
+    </section>
 
-        <div class="main-btn-container">
-            <a href="https://payment.hotmart.com/O57415854V?checkoutMode=10" class="main-btn">SÍ, QUIERO SER PARTE!</a>
+    <!--===================== FOOTER  =====================-->
+    <footer class="footer">
+
+        <div class="footer-container">
+            <div class="fila">
+                <h3><a href="#" style="color: #fff; text-decoration: none;">CREARIVE PRO</a></h3>
+                <p class="text-justify">
+                    Creative Pro ©<i>Sebastian Bronley</i>
+                </p>
+            </div>
+            <div class="botones">
+                <a href="#">Sobre Nosotros</a>
+                <a href="#">GitHub</a>
+            </div>
+            <div>
+                <h5>© 2021 | Todos los derechos reservados</h5>
+            </div>
         </div>
+    </footer>
 
-        <p><b><i> Ultimos espacios disponinbles </i></b></p>
-        <div class="line">
-            <span></span>
-        </div>
-
-    </div>
-</section>
-
-<!--===================== GRID  =====================-->
-<section data-aos="fade-up" class="section-grid section">
-
-    <h1>Imagina todo lo que podrás lograr siendo un fotógrafo retratista profesional.</h1>
-
-    <div class="grid-container">
-        <div data-aos="fade-left" >
-            <p class="grid_text">Lorem ipsum dolor sit.</p>
-        </div>
-        <div data-aos="fade-right">
-            <img src="assets/image/grid_11.jpg" alt="grid image">
-        </div>
-        <div data-aos="fade-left">
-            <p class="grid_text">Lorem ipsum dolor sit</p>
-        </div>
-        <div data-aos="fade-right">
-            <img src="assets/image/grid_12.jpg" alt="grid image">
-        </div>
-        <div data-aos="fade-left" >
-            <p class="grid_text">Lorem ipsum dolor sit</p>
-        </div>
-        <div data-aos="fade-right" >
-            <img src="assets/image/grid_1.jpg" alt="grid image">
-        </div>
-        <div data-aos="fade-left">
-            <p class="grid_text">Lorem ipsum dolor sit</p>
-        </div>
-        <div data-aos="fade-right" >
-            <img src="assets/image/grid_2.jpg" alt="grid image">
-        </div>
-        <div data-aos="fade-left" >
-            <p class="grid_text">Lorem ipsum dolor sit</p>
-        </div>
-        <div data-aos="fade-right" >
-            <img src="assets/image/grid_3.jpg" alt="grid image">
-        </div>
-        <div data-aos="fade-left" >
-            <p class="grid_text">Lorem ipsum dolor sit</p>
-        </div>
-        <div data-aos="fade-right" >
-            <img src="assets/image/grid_4.jpg" alt="grid image">
-        </div>
-        <div  data-aos="fade-left" >
-            <p class="grid_text">Lorem ipsum dolor sit</p>
-        </div>
-        <div data-aos="fade-right">
-            <img src="assets/image/grid_9.jpg" alt="grid image">
-        </div>
-        <div data-aos="fade-left" >
-            <p class="grid_text">Lorem ipsum dolor sit</p>
-        </div>
-        <div data-aos="fade-right" >
-            <img src="assets/image/grid_8.jpg" alt="grid image">
-        </div>
-
-    </div>
-</section>
-
-<!--===================== ESTUDIANTES =====================-->
-<section class="section-estudiantes section">
-
-    <div class="estudiantes_title">
-        <h1>Nuestros estudiantes.</h1>
-    </div>
-
-    <div class="estudiantes-container">
-
-      <div class="estudiante_row">
-        <div class="col-md-4">
-          <p>
-            Cuando entré no sabía casi nada de retoque de piel, me ayudó a tener un flujo de trabajo con lightroom y photoshop, ya que antes no era muy ordenada porque veía distintos tutoriales de internet y solo usaba photoshop. Además, su actitud fue muy entusiasta al dictar las clases lo cuál hizo que no fueran aburridas.
-          </p>
-
-          <div class="wrappper">
-            <img src="assets/image/belen.jpg" />
-            <h3>Belén Ramírez</h3>
-            <small>Estudinte de Fotógrafia</small>
-            <ul class="puntuacion_1">
-              <li>★</li>
-              <li>★</li>
-              <li>★</li>
-              <li>★</li>
-              <li>★</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="estudiante_row">
-        <div class="col-md-4">
-          <p>
-            El curso me pareció increíble, tiene un montón de información útil y lo mejor es que lo hace súper sencillo como para que un niño lo pueda entender, soy fotografo de viajes y me ayudó muchísimo a subir la calidad de mis fotos al momento de editar y también pude por fin aprender a retocar pieles de la manera correcta, estoy encantado con los resultados.
-          </p>
-
-          <div class="wrappper">
-            <img src="assets/image/renato.jpg" />
-            <h3>Renato Perez</h3>
-            <small>Creador de Trópico Preset</small>
-            <ul class="puntuacion_2">
-              <li>★</li>
-              <li>★</li>
-              <li>★</li>
-              <li>★</li>
-              <li>★</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="estudiante_row">
-        <div class="col-md-4">
-          <p>
-            El curso cumple, soy Filmaker Profesional y editar fotos se me hacía complicado, pero en realidad gracias a Sebastián entendí que era todo lo contrario, aprender a editar me tomó menos tiempo de lo que creí y las acciones y presets facilitarón mucho el flujo de trabajo.
-          </p>
-
-          <div class="wrappper">
-            <img src="assets/image/martin.jpg" />
-            <h3>Martín Velarde</h3>
-            <small>Creador de Visual Media Group</small>
-            <ul class="puntuacion_3">
-              <li>★</li>
-              <li>★</li>
-              <li>★</li>
-              <li>★</li>
-              <li>★</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="estudiante_row">
-        <div class="col-md-4">
-          <p>
-            Llevar el curso de Retoque fotográfico con Sebastian Bronley fue bastante completo y excelente. Vimos cómo retocar una fotografía de retrato desde 0, con Lightroom y luego con las herramientas de Photoshop, y si bien es compleja la edición fue un curso muy ameno en el que aprendes algo tan amplio de una manera sencilla pero sin que se escape ningún detalle. Definitivamente recomiendo el curso para todo fotógrafo porque llevo mi edición de un 0 a 100. <b>10/10</b>
-          </p>
-
-          <div class="wrappper">
-            <img src="assets/image/guillermo.jpg" />
-            <h3>Guillermo Saravia</h3>
-            <small>Estudiante de Audiovisuales</small>
-            <ul class="puntuacion_4">
-              <li>★</li>
-              <li>★</li>
-              <li>★</li>
-              <li>★</li>
-              <li>★</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </div>
-</section>
-
-<!--===================== IMAGENES ESTUDIANTE  =====================-->
-<section class="section_imagenes_estudiantes section">
-
-    <div class="imagen_estudiante">
-        <img src="assets/image/daniel.jpg" alt="imagen estudiante">
-        <img src="assets/image/daniel.jpg" alt="imagen estudiante">
-    </div>
-
-</section>
-
-<!--===================== GARANTIA  =====================-->
-<section data-aos="zoom-in" class="section-garantia section">
-
-    <div class="garantia-container">
-        <img src="assets/image/garantia.png" alt="garantia img">
-        <div>
-            <h2>Garantía de 7 Días de Reembolso 100%</h2>
-            <b>No tienes nada que perder</b>
-            <p>
-                Si luego de adquirir nuestro curso, este no cumple con tus expectativas te reembolsamos el 100% de tu inversión. Tu reembolso está garantizado por Hotmart la plataforma en la que está alojado nuestro producto y en la que también realizarás el pago.
-            </p>
-        </div>
-    </div>
-
-</section>
-
-<!--===================== PRODUCTO2  =====================-->
-<section class="section-producto section" data-aos="zoom-in">
-
-    <div class="oferta-especial" data-aos="fade-up">
-        <h2>AHORA QUE NO TIENES NINGUN TIPO DE RIESGO NI EXCUSAS…</h2>
-        <h1>!Esto es todo lo que obtendrás!</h1>
-
-        <img width="500px" src="assets/image/Grupo.png" alt="producto">
-        <div class="oferta-lista oferta-lista2">
-            <ul>
-                <h1>SOLO SI ACTIVAS TU CUETA HOY:</h1>
-                <li>Curso completo de fotografía de retrato de 0 a 100 (ACCESO PARA TODA LA VIDA).</li>
-                <li>Acceso a TODAS las actualizaciones de CREATIVE PRO.</li>
-                <li>Bono #1: TODOS los presets de Vibrant Preset Pack.</li>
-                <li>Bono #2: Acciones de Photoshop PROFESIONALES.</li>
-                <li>Bono #3: Imágenes RAW ILIMITADAS + PSD proyecto del curso.</li>
-                <li>Bono #4: Acceso a la COMUNIDAD PRIVADA de Creative Pro.</li>
-            </ul>
-        </div>
-
-        <h1>TODO ESTO TIENE UN VALOR TOTAL DE <span>577 USD</span></h1>
-        <h1>Solo por hoy <span class="precio-green" >65 USD</span></h1>
-
-
-        <div class="main-btn-container">
-            <a href="https://payment.hotmart.com/O57415854V?checkoutMode=10" class="main-btn">QUIERO ESTA OFERTA!</a>
-        </div>
-        <small>click en el botón de arriba para ver precios en tu moneda local.</small>
-
-        <div class="line">
-            <span></span>
-        </div>
-
-    </div>
-</section>
-
-<!--===================== Q&A  =====================-->
-<section class="section_QA section" id="seccion4">
-
-    <h1>Preguntas Frecuentes</h1>
-    <div class="QA_container" data-aos="fade-left">
-
-        <div class="pregunta" data-tooltip="Sí, el curso te ayudará a sacarle el provecho a los equipos con los que ya cuentas al 100% y lograr fotografías profesionales, sin importar el lente o cámara que tengas.">
-            <p>No cuento con una cámara costosa, ¿igual puedo llevar este curso?</p>
-        </div>
-        <div class="pregunta" data-tooltip="Este curso está diseñado para todo tipo de público, seas principiante, estés empezando o ya lleves años en la fotografía, veremos todo desde lo más básico hasta lo más avanzado de manera práctica y ordenada.">
-            <p>¿Necesito tener conocimientos previos?</p>
-        </div>
-        <div class="pregunta" data-tooltip="CreativePro y sus actualizaciones son para siempre y tu acceso a este también, podrás tenerlo para toda la vida y verlo cuantas veces quieras sin ninguna limitación.">
-            <p>¿Tendré acceso por siempre al curso una vez que lo adquiera?</p>
-        </div>
-            <div class="pregunta" data-tooltip="En la plataforma en la que realizarás el pago tienes diversos métodos tales como: Tarjetas de crédito o débito (Sin importar el país en el que te encuentres o el banco al que pertenezcas), PayPal, Pago en Efectivo.">
-            <p>¿Cuáles son los métodos de pago y funcionan en cualquier país?</p>
-        </div>
-        <div class="pregunta" data-tooltip="Mediante nuestra comunidad privada de Telegram podrás realizar todas tus preguntas y estas serán respondidas personalmente por Sebastián Bronley para que no te queden dudas.">
-            <p>Una vez esté dentro de CreativePro ¿tendré soporte si tengo dudas sobre alguna clase?</p>
-        </div>
-        <div class="pregunta" data-tooltip="Luego de los 7 días de compra, si el programa no cumple con tus expectativas o no quedas satisfecho puedes reclamar tu reembolso mediante «refund.hotmart» con tu número de transacción y tu correo.">
-            <p>Garantía de reembolso</p>
-        </div>
-        <div class="pregunta" data-tooltip="Cuando vayas a realizar la compra haciendo click en cualquiera de los botones, serás re direccionado a la plataforma de pago (Hotmart) donde automáticamente el precio se verá reflejado en tu moneda actual según el país en el que te encuentres.">
-            <p>¿Cuál es el precio en mi moneda local?</p>
-        </div>
-    </div>
-
-</section>
-
-<!--===================== FOOTER  =====================-->
-<footer class="footer">
-
-    <div class="footer-container">
-        <div class="fila">
-            <h3><a href="#" style="color: #fff; text-decoration: none;">CREARIVE PRO</a></h3>
-            <p class="text-justify">
-                Creative Pro ©<i>Sebastian Bronley</i>
-            </p>
-        </div>
-        <div class="botones">
-            <a href="#">Sobre Nosotros</a>
-            <a href="#">GitHub</a>
-        </div>
-        <div>
-            <h5>© 2021 | Todos los derechos reservados</h5>
-        </div>
-    </div>
-</footer>
-
-<script src="assets/js/scroll_observer.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
+    <script src="assets/js/scroll_observer.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>

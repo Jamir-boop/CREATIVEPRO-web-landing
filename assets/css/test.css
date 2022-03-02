@@ -1,72 +1,72 @@
-body{
-  background-color: #262626;
+body {
+	background-color: #262626;
 }
 
 .section-estudiantes {
-  font-size: 1rem;
-  color: var(--w);
+	font-size: 1rem;
+	color: var(--w);
 
-  padding: 20px;
+	padding: 20px;
 }
 
-.estudiante_row p{
-  position: relative;
-  padding: 20px 20px 20px 65px;
-  background: var(--void_blue);
-  border-radius: 10px;
-  margin-bottom: 35px;
-  color: white;
+.estudiante_row p {
+	position: relative;
+	padding: 20px 20px 20px 65px;
+	background: var(--void_blue);
+	border-radius: 10px;
+	margin-bottom: 35px;
+	color: white;
 }
 
 /* Speach bouble Quote */
-.estudiante_row p:before{
-  content: "\201C"; /*Unicode for Left Double Quote*/
+.estudiante_row p:before {
+	content: "\201C"; /*Unicode for Left Double Quote*/
 
-  font-size: 60px;
-  font-weight: bold;
+	font-size: 60px;
+	font-weight: bold;
 
-  /*Positioning*/
-  position: absolute;
-  left: 20px;
-  top: 5px;
+	/*Positioning*/
+	position: absolute;
+	left: 20px;
+	top: 5px;
 }
 
 /* Speech bouble triangle */
-.estudiante_row p:after{
-  content: ' ';
-  border: 10px solid;
-  border-color: var(--void_blue) transparent transparent var(--void_blue);
-  position: absolute;
-  bottom: -20px;
-  left: 30px;
+.estudiante_row p:after {
+	content: " ";
+	border: 10px solid;
+	border-color: var(--void_blue) transparent transparent var(--void_blue);
+	position: absolute;
+	bottom: -20px;
+	left: 30px;
 }
 
-.wrappper{
-  margin-bottom: 50px;
+.wrappper {
+	margin-bottom: 50px;
 }
-.wrappper img{
-  width: 150px;
-  height: 150px;
-  float: left;
-  border-radius: 20px;
-  margin-right: 20px;
+.wrappper img {
+	width: 150px;
+	height: 150px;
+	float: left;
+	border-radius: 20px;
+	margin-right: 20px;
 }
-.wrappper h3{
-  padding: 15px 0 0 0;
-  color: orange;
+.wrappper h3 {
+	padding: 15px 0 0 0;
+	color: orange;
 }
-.wrappper small{
-  display: block;
-  color: #999;
-  margin-top: -10px;
+.wrappper small {
+	display: block;
+	color: #999;
+	margin-top: -10px;
 }
-.wrappper ul{
-  list-style: none;
+.wrappper ul {
+	list-style: none;
 }
-.wrappper ul li{
-  display: inline;
-  font-size: 1.3em;
+.wrappper ul li {
+	display: inline;
+	font-size: 1.3em;
 }
-.puntuacion_1 li:nth-child(-n+4){
-  color: orange;
+.puntuacion_1 li:nth-child(-n + 4) {
+	color: orange;
 }

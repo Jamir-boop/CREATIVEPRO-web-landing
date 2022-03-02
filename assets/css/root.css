@@ -1,15 +1,16 @@
-:root{
-    /*--void: #212832;*/
-    --void: #000;
-    --void_transparent: rgba(14, 11, 22, 0.38);
-    --void_blue: #393D46;
-    --w: #ffff;
-    --w2: #e7dfdd;
-    --fucshia: #ec4a04;
-    --blue: #0092CB;
-    --transition: all 200ms ease-in-out;
-    --shadow: 0px 10px 13px -7px #000000, 4px 8px 18px 11px rgba(0,0,0,0.1);
-    font-family: 'Georama', sans-serif;
+:root {
+	/*--void: #212832;*/
+	--void: #000;
+	--void_transparent: rgba(14, 11, 22, 0.38);
+	--void_blue: #393d46;
+	--w: #ffff;
+	--w2: #e7dfdd;
+	--fucshia: #ec4a04;
+	--blue: #0092cb;
+	--transition: all 200ms ease-in-out;
+	--shadow: 0px 10px 13px -7px #000000, 4px 8px 18px 11px rgba(0, 0, 0, 0.1);
+	font-family: "Georama", sans-serif;
+	--fz-subtitulos: 1.5rem;
 }
 
 /*:root{*/
